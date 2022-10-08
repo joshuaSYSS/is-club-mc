@@ -111,6 +111,7 @@ body {
         setInterval(changeText, 5000);
     </script>
     <h4 style="color:#0000ff" id = "e">This is a collection of multiple choice questions related to Integrated Science. Feel free to propose more problems to us!</h4>
+    <code>Please select <mark>1</mark> answer.</code>
     <br><br><br>
     <div class="question">
         1.
@@ -119,7 +120,7 @@ body {
         <!--template-->
         <br>
         <label for="c">Select:</label>
-        <select name="c" id="c" multiple>
+        <select name="c" id="1" single>
             <option value="A">Weight / Height ^ 2</option>
             <option value="B">(Weight ^ 2) * Height</option>
             <option value="C">Weight * Height * π</option>
@@ -128,7 +129,7 @@ body {
         <br><br>
         <script>
         function getInputValue() {
-            let value = document.getElementById("c").value;
+            let value = document.getElementById("1").value;
             if(value=="A"){
                 alert("Correct! BMI measures the relationship between your weight and height to calculate the amount of body fat you have. The higher your BMI, the higher the amount of fat in your body.");
             }
@@ -153,8 +154,8 @@ body {
         <h5>Fun Fact: A cubic inch of bone can in principle bear a load of 19,000 lbs. (8,626 kg) or more — roughly the weight of five standard pickup trucks — making it about four times as strong as concrete!</h5>
         <!--template-->
         <br>
-        <label for="c">Select:</label>
-        <select name="c" id="c" multiple>
+        <label for="c1">Select:</label>
+        <select name="c1" id="2" single>
             <option value="A">350</option>
             <option value="B">206</option>
             <option value="C">428</option>
@@ -162,8 +163,8 @@ body {
         </select>
         <br><br>
         <script>
-        function getInputValue() {
-            let value = document.getElementById("c").value;
+        function getInputValue2() {
+            let value = document.getElementById("2").value;
             if(value=="A"){
                 alert("Wrong.");
             }
@@ -178,7 +179,7 @@ body {
             }
         }
         </script>
-        <button type="button" onclick="getInputValue();">Submit</button>
+        <button type="button" onclick="getInputValue2();">Submit</button>
         <!--template ends-->
     </div>
     <br><br>
@@ -189,14 +190,14 @@ body {
         <!--template-->
         <br>
         <label for="c">Select:</label>
-        <select name="c" id="c" multiple>
+        <select name="c" id="3" single>
             <option value="A">True</option>
             <option value="B">False</option>
         </select>
         <br><br>
         <script>
-        function getInputValue() {
-            let value = document.getElementById("c").value;
+        function getInputValue3() {
+            let value = document.getElementById("3").value;
             if(value=="A"){
                 alert("Correct! A chemical element, often simply called an element, is a type of atom which has the same number of protons in its atomic nucleus (i.e., the same atomic number, or Z).");
             }
@@ -205,7 +206,7 @@ body {
             }
         }
         </script>
-        <button type="button" onclick="getInputValue();">Submit</button>
+        <button type="button" onclick="getInputValue3();">Submit</button>
         <!--template ends-->
     </div>
         <br><br>
@@ -216,14 +217,14 @@ body {
         <!--template-->
         <br>
         <label for="c">Select:</label>
-        <select name="c" id="c" multiple>
+        <select name="c" id="4" single>
             <option value="A">True</option>
             <option value="B">False</option>
         </select>
         <br><br>
         <script>
-        function getInputValue() {
-            let value = document.getElementById("c").value;
+        function getInputValue4() {
+            let value = document.getElementById("4").value;
             if(value=="A"){
                 alert("Correct! pH is a measure of how acidic/basic water is. The range goes from 0 to 14, with 7 being neutral. pHs of less than 7 indicate acidity, whereas a pH of greater than 7 indicates a base. pH is really a measure of the relative amount of free hydrogen and hydroxide ions in the water.");
             }
@@ -232,7 +233,7 @@ body {
             }
         }
         </script>
-        <button type="button" onclick="getInputValue();">Submit</button>
+        <button type="button" onclick="getInputValue4();">Submit</button>
         <!--template ends-->
     </div>
     <br><br>
@@ -243,14 +244,14 @@ body {
         <!--template-->
         <br>
         <label for="c">Select:</label>
-        <select name="c" id="c" multiple>
+        <select name="c" id="5" single>
             <option value="A">True</option>
             <option value="B">False</option>
         </select>
         <br><br>
         <script>
-        function getInputValue() {
-            let value = document.getElementById("c").value;
+        function getInputValue5() {
+            let value = document.getElementById("5").value;
             if(value=="A"){
                 alert("Wrong. But I don't suggest tasting your own blood just to prove yourself correct/wrong...");
             }
@@ -259,7 +260,7 @@ body {
             }
         }
         </script>
-        <button type="button" onclick="getInputValue();">Submit</button>
+        <button type="button" onclick="getInputValue5();">Submit</button>
         <!--template ends-->
     </div>
         <br><br>
@@ -270,14 +271,14 @@ body {
         <!--template-->
         <br>
         <label for="c">Select:</label>
-        <select name="c" id="c" multiple>
+        <select name="c" id="6" single>
             <option value="A">True</option>
             <option value="B">False</option>
         </select>
         <br><br>
         <script>
-        function getInputValue() {
-            let value = document.getElementById("c").value;
+        function getInputValue6() {
+            let value = document.getElementById("6").value;
             if(value=="A"){
                 alert("Correct! By Conservation of electric charge, the total electric charge of an isolated system remains constant regardless of changes within the system itself.");
             }
@@ -286,7 +287,7 @@ body {
             }
         }
         </script>
-        <button type="button" onclick="getInputValue();">Submit</button>
+        <button type="button" onclick="getInputValue6();">Submit</button>
         <!--template ends-->
     </div>
     <br><br>
@@ -297,7 +298,7 @@ body {
         <!--template-->
         <br>
         <label for="c">Select:</label>
-        <select name="c" id="c" multiple>
+        <select name="c" id="7" single>
             <option value="A">Liver</option>
             <option value="B">Small Intestine</option>
             <option value="C">Lungs</option>
@@ -305,8 +306,8 @@ body {
         </select>
         <br><br>
         <script>
-        function getInputValue() {
-            let value = document.getElementById("c").value;
+        function getInputValue7() {
+            let value = document.getElementById("7").value;
             if(value=="A"){
                 alert("Wrong. Your liver makes a digestive juice called bile that helps digest fats and some vitamins. Bile ducts carry bile from your liver to your gallbladder for storage, or to the small intestine for use.");
             }
@@ -321,7 +322,7 @@ body {
             }
         }
         </script>
-        <button type="button" onclick="getInputValue();">Submit</button>
+        <button type="button" onclick="getInputValue7();">Submit</button>
         <!--template ends-->
     </div>
         <br><br>
@@ -332,7 +333,7 @@ body {
         <!--template-->
         <br>
         <label for="c">Select:</label>
-        <select name="c" id="c" multiple>
+        <select name="c" id="8" single>
             <option value="A">Electron</option>
             <option value="B">Proton</option>
             <option value="C">Neon</option>
@@ -340,8 +341,8 @@ body {
         </select>
         <br><br>
         <script>
-        function getInputValue() {
-            let value = document.getElementById("c").value;
+        function getInputValue8() {
+            let value = document.getElementById("8").value;
             if(value=="A"){
                 alert("Wrong. The electron is a subatomic particle (denoted by the symbol e− or β−) whose electric charge is negative one elementary charge.");
             }
@@ -356,7 +357,7 @@ body {
             }
         }
         </script>
-        <button type="button" onclick="getInputValue();">Submit</button>
+        <button type="button" onclick="getInputValue8();">Submit</button>
         <!--template ends-->
     </div>
     <br><br>
