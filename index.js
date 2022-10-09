@@ -73,7 +73,7 @@ function reset(){
     c.style.backgroundColor = "rgb(0, 0, 0)";
 }
 function submit(){
-    alert("Red " + (rCur/50).toString() + " Correct Red Answer " + rAns.toString() +"\nGreen " + (gCur/50).toString() + " Correct Green Answer " + gAns.toString() + "\nBlue " + (bCur/50).toString() + " Correct Blue Answer " + bAns.toString() + "\n" + (Math.abs(rAns - rCur) <= 1 && Math.abs(gAns - gCur) <= 1 && Math.abs(bAns - bCur) <= 1?"Well Done!":Math.abs(rAns - rCur) <= 2 && Math.abs(gAns - gCur) <= 2 && Math.abs(bAns - bCur) <= 2?"You're reaching somewhere!":"Try Harder this time!"));
+    alert("Red " + (rCur/50).toString() + " Correct Red Answer " + rAns.toString() +"\nGreen " + (gCur/50).toString() + " Correct Green Answer " + gAns.toString() + "\nBlue " + (bCur/50).toString() + " Correct Blue Answer " + bAns.toString() + "\n" + (Math.abs(rAns - rCur/50) <= 1 && Math.abs(gAns - gCur/50) <= 1 && Math.abs(bAns - bCur/50) <= 1?"Well Done!":Math.abs(rAns - rCur/50) <= 2 && Math.abs(gAns - gCur/50) <= 2 && Math.abs(bAns - bCur/50) <= 2?"You're reaching somewhere!":"Try Harder this time!"));
     genColor();reset();
 }
 
