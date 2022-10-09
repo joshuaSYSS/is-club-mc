@@ -67,6 +67,9 @@ function delB(){
 }
 function reset(){
     var c = document.getElementById("cv");
+    rCur = 0;
+    gCur = 0;
+    bCur = 0;
     c.style.backgroundColor = "rgb(0, 0, 0)";
 }
 function submit(){
