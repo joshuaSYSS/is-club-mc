@@ -18,7 +18,7 @@ document.addEventListener('keydown', function(event) {
 function resized(){
     var w = window.innerWidth;
     if(w <= 505){
-        document.getElementById("addbr").innerHTML = "<p id=\"addbr\"><br><br></p>";
+        document.getElementById("addbr").innerHTML = "<p id=\"addbr\"><br><br><br><br><br></p>";
     }
     else{
         document.getElementById("addbr").innerHTML = "<p id=\"addbr\"></p>";
