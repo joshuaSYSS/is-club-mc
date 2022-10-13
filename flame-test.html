@@ -1,1 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flame Test</title>
+    <link type="text/css" rel="stylesheet" href="/main.css">
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/L6mkY4V/Photo-from-no-reply-1-removebg-preview.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    text-align:center;
+}
 
+.topnav {
+  overflow: hidden;
+  background-color: #000000;
+    text-align: left;
+    position:fixed;
+    width:100%;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+    .time{
+        background-color: brown;
+        position: fixed;
+        bottom: 0; /* Position the navbar at the top of the page */
+        width: 100%; /* Full width */
+        overflow: hidden;
+    }
+    main {
+        margin-top: 30px; /* Add a top margin to avoid content overlay */
+    }
+    .question{
+        background-color:#ffffb3;
+        width: 75%;
+        margin: auto;
+        padding: 10px;
+        text-align: left;
+    }
+    .bottomBG{
+        background-color:#e6e6ff;
+        width:100%;
+        height:auto;
+    }
+    .navbar {
+        background-color: #333;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    .responsiveImg{
+        height: auto;
+        max-width:100%;
+    }
+    .turnOnButton{
+        background-color: #04AA6D; 
+        border: 1px solid green;
+        color: white;
+        padding: 13px 30px;
+        cursor: pointer;
+        width: 10%;
+    }
+    .turnOnButton:hover {
+        background-color: #3e8e41;
+    }   
+    .collapsible{
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+    }
+    .active, .collapsible:hover {
+        background-color: #9966ff;
+    }
+
+    .content {
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        background-color: #47476b;
+    }
+    @media screen and (max-width: 1000px) {
+        .topnav a {
+            float: none;
+            display: block;
+        }
+    }
+    </style>
+</head>
+<body onresize="resized()">
+    <!--INIT-->
+    <div class="topnav">
+        <a href="https://sites.google.com/syss.edu.hk/integrated-science-club/home"><img src="https://i.ibb.co/L6mkY4V/Photo-from-no-reply-1-removebg-preview.png" style="width:40px;height:40px;"/></a>
+        <code><h1 style="color:white"><strong>2022 - 2023 Integrated Science Club</strong></h1></code>
+    </div>
+    <!--END OF INIT-->
+    
+    <div style="background-color:#bfbfbf">
+        <br><br><br><br><br><br><br><br>
+        <p id="addbr"></p>
+        <h1 style="color:darkred"><strong>Flame Test Simulation presented by Integrated Science Club and Chemistry Club</strong></h1>
+        <h4 style="color:#0000ff">Metal exists all around us. However, do you know that some specific metal burns in different color under heating?</h4>
+        <h4 style="color:#ff33cc">We Integrated Science Club collaborated with <a href="https://sites.google.com/syss.edu.hk/chemistry-club">Chemistry Club</a> created this Flame Test Simulation for students to observe<br>common metals that produce special flame under heating.</h4>
+        <br><br>
+    </div>
+    
+    <br><br>
+    <p id="mp"><img alt="Metal" src="img/emptyMetal.png" class="responsiveImg"  style="width:80px;height:70px" title="Metal"/></p>
+    <br><br>
+    <img alt="Bunsen Burner" src="img/bunsenBurnerNoFlame.png" class="responsiveImg" title="Bunsen Burner(Not Active)"/>
+    <br><br>
+    <button class="turnOnButton" style="max-width: 100%;height: auto;"><b id="turnOnText">TURN ON</b></button>
+    <!--<button class="turnOnButton" disabled><b>TURN ON</b></button>-->
+    <br><br>
+    <select id="metal" onchange="changeImg()" style="background-color:#99ff99;border: 1px solid green;padding: 10px 24px;width: 10%;color:white" single>
+        <option value="aluminium"><b>Aluminium</b></option>
+        <option value="calcium"><b>Calcium</b></option>
+        <option value="iron"><b>Iron(II)</b></option>
+        <option value="mercury"><b>Mercury</b></option>
+        <option value="potassium"><b>Potassium</b></option>
+        <option value="lithium"><b>Lithium</b></option>
+        <option value="sodium"><b>Sodium</b></option>
+        <option value="zinc"><b>Zinc</b></option>
+    </select>
+    <br><br>
+    <div style="background-color:#bfbfbf">
+        <br>
+        <h2 style="text-align: center">Common Questions:</h2>
+        <br>
+        <button type="button" class="collapsible" style="text-align: center"><strong>Why does different metal produce different flame color on heat?</strong></button>
+        <div class="content" style="background-color: #1f1f2e;color:whitesmoke">
+            <br>
+            <strong>Different metals have different structure and electron arrangement. These are the main factors affecting the properties of the metal.<br>
+            The idea of the test is that sample atoms evaporate and since they are hot, they emit light when being in flame. </strong>
+            <br><br>
+        </div>
+        <button type="button" class="collapsible" style="text-align: center"><strong>Is it hard to do this experiment? If no, what should I pay attention to?</strong></button>
+        <div class="content" style="background-color: #1f1f2e;color:whitesmoke">
+            <br>
+            <strong>Not at all! You only need a pair of safety glasses, bunsen burner, fireproof mat, tongs and the sample metal.<br>
+                Please conduct the experiment under an adult supervisor. Also check the gas tube before igniting the bunsen burner.</strong>
+            <br><br>
+        </div>
+        <button type="button" class="collapsible" style="text-align: center"><strong>Among all common metals, why is Mercury the only metal that exist as liquid under room temperature?</strong></button>
+        <div class="content" style="background-color: #1f1f2e;color:whitesmoke">
+            <br>
+            <strong>In short, electrons of mercury (Hg) are too near the nucleus, and too fast or too unpredictable to move that they cannot be contained in a strong bond, i.e. solids.<br>
+                This concept of weak bonding makes a good explanation of mercury, being a liquid at room temperature.  </strong>
+            <br><br>
+        </div>
+    </div>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            } 
+        });
+        }
+    </script>
+        
+    <!--FOOTER-->
+    <br><br>
+    <h2 style="color:#0066ff">Did you learn new things from this flame test? You can share this to your friends to show them and</h2>
+    <h2 style="color:#00cc99">join both <strong>IS Club</strong> and <strong>Chemistry Club</strong> to enjoy <a href="https://joshuasyss.github.io/is-club-mc.github.io/">more</a> fun websites related to integrated science, while participating in events held by us!
+    <br>
+        View more details <a href="https://sites.google.com/syss.edu.hk/integrated-science-club/home">here</a>
+    </h2>
+    <div class="bottomBG" >
+    <br>
+    <h5 style="color:black"><footer>
+        Website created by <b>Integrated Science Club committee.</b><br>
+        Should you have any enquiries, feel free to contact any of our committee members of both club, or sending an email to sy10236@syss.edu.hk<br>
+        <code>2022-23 Integrated Science Club</code>
+        </footer></h5>
+        <code><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"/></a><br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</code>
+    <br><br><br><br>
+    </div>
+    <!--END OF FOOTER-->
+    <script src="ftest.js"/>
+</body>
+</html>
