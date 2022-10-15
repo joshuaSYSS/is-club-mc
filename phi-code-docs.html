@@ -1,1 +1,126 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phi Code Docs</title>
+    <link type="text/css" rel="stylesheet" href="/main.css">
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/L6mkY4V/Photo-from-no-reply-1-removebg-preview.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+    margin: 0;
+    font-family: 'Acme', Arial, Helvetica, sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(https://lh3.googleusercontent.com/SuoGEEbnTSozlrJq-_AK-jdV3YgTsgY55KJebLDwLxonKUEQ17yEVK2lXeSeMeZ_VPOkag=w16383);
+    background-size: cover; background-position: center center; 
+    text-align:left;
+    height:100%;
+    color: ghostwhite;
+}
+html {
+  scroll-behavior: smooth;
+    height:100%;
+}
+
+    @media screen and (max-width: 1000px) {
+        .topnav a {
+            float: none;
+            display: block;
+        }
+    }
+    </style>
+</head>
+<body>
+    <h1><header>Phi φ Code Documentary</header></h1>
+    <br>
+    Phi Code's idea is based on a specific language, and inspired the birth of Phi Code.<br>
+    It is tested that it is possible to solve all puzzle by only using the following codes, so you do not have to worry about concatting strings.
+    <br>
+    <h2>1.Output</h2>
+    To output some context, use <b>~</b> to represent printing. use space to separate each character, after <b>~</b> and before <b>;</b>. Also use ascii.
+    In this example of printing out <b>Hello World</b>,<br>
+    <code>
+    ~ 72 101 108 108 111 32 87 111 114 108 100 ;<br>
+    </code><br>
+    Expected output:<br>
+    <code>
+    Hello World
+    </code>
+    <br>
+    <h2>2.Ending Syntax</h2>
+    Every Phi Code statement ends with a semicolon ;
+    <br>
+    <h2>3.Variable</h2>
+    There does not exist variable in Phi Code. But instead, you can allocate memory from the array. Use <b>@</b> to denote you are referring to the memory bar.
+    For example storing the number <b>10</b> in the first address of the array,<br>
+    <code>
+    @0 : 10 ;<br>
+    </code>
+    To output the first address,<br>
+    <code>
+    ~ @0 ;<br>
+    </code>
+    Expected Output:<br>
+    <code>
+    10<br>
+    </code>
+    <h2>4.User Input</h2>
+    Use <b>></b> to get user input. Be reminded that for length >= 2 input, the system will automatically replace the following address memory for enough space.
+    For example getting user input and storing it in the 2nd address, <br>
+    <code>
+    > @1 ; ~ @1 ;<br>
+    </code>
+    User Input:<br>
+    <code>
+    a<br>
+    </code>
+    Expected Output:<br>
+    <code>
+    a<br>
+    </code>
+    <br>
+    <code>
+    > @2 ; @5 : f ; ~ @5 ;<br>
+    </code>
+    User Input:<br>
+    <code>
+    IS Club<br>
+    </code>
+    Expected Output:<br>
+    <code>
+    C<br>
+    </code>
+    <h2>5.Arithmtic Operation</h2>
+    There does not exist + - * /. Instead, <b>&</b> <b>|</b> <b>^</b> are used.<br>https://en.wikipedia.org/wiki/Bitwise_operation<br>
+    For example, finding the modulo of user input by 4,<br>
+    <code>
+    > @0 ; ~ @0 & 3 ;<br>
+    </code>
+    User Input:<br>
+    <code>
+    89<br>
+    </code>
+    Expected Output:<br>
+    <code>
+        1<br>
+    </code>
+    <h2>6.Logic Operation and If-Else Condition</h2>
+    Use <b>=</b> <b>></b> <b><</b> to compare between numbers.
+    Phi Code uses tenary operator for If-Else condition. However for each ternary operator, you have to use increasing <b>? :</b>
+    For example, determining is the user input non-positive, then determining is it zero or not<br>
+    <code>
+    > @0 ; ~ @0 < 1 ? @0 > -1 ?? 90 101 114 111 :: 78 101 103 97 116 105 118 101 : 80 111 115 105 116 105 118 101 ;<br>
+        </code></code>
+    User Input:
+    <code>
+    10    <br>
+    </code>
+    Expected Output:<br>
+    <code>
+    Positive<br>
+    </code>
+    <!--Discard-->
+    <br><br>
+</body>
+</html>
