@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phi Code Puzzle</title>
+    <link type="text/css" rel="stylesheet" href="/main.css">
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/L6mkY4V/Photo-from-no-reply-1-removebg-preview.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+    margin: 0;
+    font-family: 'Acme', Arial, Helvetica, sans-serif;
+    /*background-color: #ffffff;*/
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(https://lh3.googleusercontent.com/SuoGEEbnTSozlrJq-_AK-jdV3YgTsgY55KJebLDwLxonKUEQ17yEVK2lXeSeMeZ_VPOkag=w16383);
+    background-size: cover; background-position: center center; 
+    text-align:center;
+    height:100%;
+}
+html {
+  scroll-behavior: smooth;
+    height:100%;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #000000;
+    text-align: left;
+    position:fixed;
+    width:100%;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+    .time{
+        background-color: brown;
+        position: fixed;
+        bottom: 0; /* Position the navbar at the top of the page */
+        width: 100%; /* Full width */
+        overflow: hidden;
+    }
+    main {
+        margin-top: 30px; /* Add a top margin to avoid content overlay */
+    }
+    .question{
+        background-color:#ffffb3;
+        width: 75%;
+        margin: auto;
+        padding: 10px;
+        text-align: left;
+    }
+    .bottomBG{
+        background-color:#e6e6ff;
+        width:100%;
+        height:auto;
+    }
+    .navbar {
+        background-color: #333;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    .responsiveImg{
+        height: auto;
+        max-width:100%;
+    }
+    .turnOnButton{
+        background-color: #04AA6D; 
+        border: 1px solid green;
+        color: white;
+        padding: 13px 30px;
+        cursor: pointer;
+        width: 10%;
+    }
+    .turnOnButton:hover {
+        background-color: #3e8e41;
+    }   
+    .collapsible{
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+    }
+    .active, .collapsible:hover {
+        background-color: #9966ff;
+    }
+
+    .content {
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        background-color: #47476b;
+    }
+    .flameOpacity{
+        transition: opacity 2s;
+    }
+    .setOpacity{
+        opacity:1;
+    }
+    #myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border:  2px solid blue; /* Remove borders */
+  outline: none; /* Remove outline */
+        background-color:lightskyblue;
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 35%; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+    #myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+    }
+    .fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+    .fa-google {
+  background: #dd4b39;
+  color: white;
+}
+    .fa-instagram {
+  background: #125688;
+  color: white;
+}
+    .bg {
+  /* The image used */
+  background-image: url("https://lh4.googleusercontent.com/zT6oyqkv8g0c5XMwkfmo8iZJw2Xsr8GYPNdbevR7pjG3zMVXEF2GXOGilxdZu-5LSLCtjA=w16383");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+    @media screen and (max-width: 1000px) {
+        .topnav a {
+            float: none;
+            display: block;
+        }
+    }
+    </style>
+</head>
+<body onresize="resized()" onscroll="scrollFunction()">
+    <!--INIT-->
+    <div class="topnav">
+        <a href="https://joshuachoi.itch.io/virus-defender" style="color:white;float:right"><code><b>Download!</b></code></a>
+        <a href="https://sites.google.com/syss.edu.hk/integrated-science-club/home"><img src="https://i.ibb.co/L6mkY4V/Photo-from-no-reply-1-removebg-preview.png" style="width:40px;height:40px;"/></a>
+        <code><h1 style="color:white"><strong>2022 - 2023 Integrated Science Club</strong></h1></code>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <!--END OF INIT-->
+    
+    <div class="bg">
+        <br><br><br><br><br><br><br><br>
+        <p id="addbr"></p>
+        <h1 style="color:whitesmoke"><big><header><strong>Phi Code Puzzle</strong></header></big></h1>
+        <h3 style="color:#b3b3ff">
+            <strong>Phi Code</strong> is a code developed directly for beginners.<br>
+            This coding language enables beginners to seamlessly transfer to more modern coding language!<br>
+        </h3>
+        <input type="text" value="" name="text" size="30" id="e">
+<p id="e"></p>
+        <br><br><br><br><br>
+    </div>
+    
+    <br><br>
+    <div style="background-color:#bfbfbf">
+        <h2 style="text-align: center">FAQ:</h2>
+        <button type="button" class="collapsible" style="text-align: center"><strong>What is the idea behind Phi Code?</strong></button>
+        <div class="content" style="background-color: #1f1f2e;color:whitesmoke">
+            <br>
+            Phi φ is an ancient greek letter. In mathematics, it is the golden ratio. So, we aimed to create a coding language as beautiful as φ in nature.
+            <br> <br>
+        </div>
+        <button type="button" class="collapsible" style="text-align: center"><strong>Syntax</strong></button>
+        <div class="content" style="background-color: #1f1f2e;color:whitesmoke">
+            <br>
+            The syntax is extremely easy to comprehense and use. View <a
+            <br> <br>
+        </div>
+    </div>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            } 
+        });
+        }
+        let mybutton = document.getElementById("myBtn");
+        function scrollFunction() {
+           if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+            } else {
+            mybutton.style.display = "none";
+        }
+            }
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+    
+        
+    <!--FOOTER-->
+    
+    <div style="background-color: white">
+        <br><br>
+        <h2 style="color:#0066ff">Hope you enjoyed playing the game!<br><br>
+            <code>Integrated Science Club Social Media:</code><br>
+            <a href="https://sites.google.com/syss.edu.hk/integrated-science-club/home" target="_blank" rel="noopener noreferrer" class="fa fa-google"></a>        
+            <a href="https://www.instagram.com/syss_is_club/" target="_blank" rel="noopener noreferrer" class="fa fa-instagram"></a><br>
+            <!--https://sites.google.com/syss.edu.hk/chemistry-club-->
+        </h2>
+        <br><br>
+    </div>
+    <div class="bottomBG" >
+        <br>
+    <h5 style="color:black">
+        <br>
+        Website created by <b>Integrated Science Club committee.</b><br>
+        Should you have any enquiries, feel free to contact any of our committee members of both club, or sending an email to sy10236@syss.edu.hk<br>
+        <code>2022-23 Integrated Science Club</code>
+        </h5>
+        <code><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"/></a><br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</code>
+    <br><br><br><br>
+    </div>
+    <!--END OF FOOTER-->
+    <script src="index.js"></script>
+</body>
+</html>
