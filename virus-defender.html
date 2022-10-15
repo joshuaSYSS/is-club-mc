@@ -1,1 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flame Test</title>
+    <link type="text/css" rel="stylesheet" href="/main.css">
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/L6mkY4V/Photo-from-no-reply-1-removebg-preview.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+    margin: 0;
+    font-family: 'Acme', Arial, Helvetica, sans-serif;
+    /*background-color: #ffffff;*/
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(https://lh3.googleusercontent.com/SuoGEEbnTSozlrJq-_AK-jdV3YgTsgY55KJebLDwLxonKUEQ17yEVK2lXeSeMeZ_VPOkag=w16383);
+    background-size: cover; background-position: center center; 
+    text-align:center;
+    height:100%;
+}
+html {
+  scroll-behavior: smooth;
+    height:100%;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #000000;
+    text-align: left;
+    position:fixed;
+    width:100%;
+}
 
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+    .time{
+        background-color: brown;
+        position: fixed;
+        bottom: 0; /* Position the navbar at the top of the page */
+        width: 100%; /* Full width */
+        overflow: hidden;
+    }
+    main {
+        margin-top: 30px; /* Add a top margin to avoid content overlay */
+    }
+    .question{
+        background-color:#ffffb3;
+        width: 75%;
+        margin: auto;
+        padding: 10px;
+        text-align: left;
+    }
+    .bottomBG{
+        background-color:#e6e6ff;
+        width:100%;
+        height:auto;
+    }
+    .navbar {
+        background-color: #333;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    .responsiveImg{
+        height: auto;
+        max-width:100%;
+    }
+    .turnOnButton{
+        background-color: #04AA6D; 
+        border: 1px solid green;
+        color: white;
+        padding: 13px 30px;
+        cursor: pointer;
+        width: 10%;
+    }
+    .turnOnButton:hover {
+        background-color: #3e8e41;
+    }   
+    .collapsible{
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+    }
+    .active, .collapsible:hover {
+        background-color: #9966ff;
+    }
+
+    .content {
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        background-color: #47476b;
+    }
+    .flameOpacity{
+        transition: opacity 2s;
+    }
+    .setOpacity{
+        opacity:1;
+    }
+    #myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border:  2px solid blue; /* Remove borders */
+  outline: none; /* Remove outline */
+        background-color:lightskyblue;
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 35%; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+    #myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+    }
+    .fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+    .fa-google {
+  background: #dd4b39;
+  color: white;
+}
+    .fa-instagram {
+  background: #125688;
+  color: white;
+}
+    .bg {
+  /* The image used */
+  background-image: url("https://i.ibb.co/jG9FLn9/2022-10-15.png");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+    @media screen and (max-width: 1000px) {
+        .topnav a {
+            float: none;
+            display: block;
+        }
+    }
+    </style>
+</head>
+<body onresize="resized()" onscroll="scrollFunction()">
+    <!--INIT-->
+    <div class="topnav">
+        <a href="https://joshuachoi.itch.io/virus-defender" style="color:white;float:right"><code><b>Download!</b></code></a>
+        <a href="https://sites.google.com/syss.edu.hk/integrated-science-club/home"><img src="https://i.ibb.co/L6mkY4V/Photo-from-no-reply-1-removebg-preview.png" style="width:40px;height:40px;"/></a>
+        <code><h1 style="color:white"><strong>2022 - 2023 Integrated Science Club</strong></h1></code>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <!--END OF INIT-->
+    
+    <div class="bg">
+        <br><br><br><br><br><br><br><br>
+        <p id="addbr"></p>
+        <h1 style="color:whitesmoke"><big><header><strong>Virus Defender</strong></header></big></h1>
+        <h3 style="color:#b3b3ff">Immune System Simulation!</h3>
+        <h3 style="color:#b3b3ff">We Integrated Science Club collaborated with <a href="https://sites.google.com/syss.edu.hk/biology-club" target="_blank" rel="noopener noreferrer">Biology Club</a> to create this fun immune system simulation.</h3>
+        <form action="https://joshuachoi.itch.io/virus-defender">
+        <button style="background-color: crimson;color:gold;height: 200px;
+            width: 300px;
+            border: 5px solid black;
+                       border-radius:50%"><h2>Download</h2></button>
+        </form>
+        <br><br><br><br><br>
+    </div>
+    
+    <br><br>
+    <div style="background-color:#bfbfbf">
+        <h2 style="text-align: center">FAQ:</h2>
+        <button type="button" class="collapsible" style="text-align: center"><strong>How To Play?</strong></button>
+        <div class="content" style="background-color: #1f1f2e;color:whitesmoke">
+            <br>
+            Use <strong>WASD</strong> to control the "immune system" represented by a red block by rotating it up, right, down and left respectively.
+            <br>
+            <img src="https://i.ibb.co/HnRLMtv/block.png" alt="Red Block" title="Red Block">
+            <br>
+            Block the viruses with the "immune system"!
+            <br>
+            <img src="https://i.ibb.co/h7RJRWN/virus1.png" alt="Virus 1" title="Virus 1">
+            <img src="https://i.ibb.co/dmTXJVS/virus2.png" alt="Virus 2" title="Virus 2">
+            <br>
+            Don't let the viruses touch the heart! If the health reaches 0, you lose.
+            <br>
+            <img src="https://i.ibb.co/Sd1XH8D/virus-Defender-Icon.png" alt="Heart" title="Heart">
+            <br>
+            You can heal by touching your heart with the medicine. But beware, you can destroy the medicine with your "immune system"!
+            <br>
+            <img src="https://i.ibb.co/9ZCP8wN/healPil.png" alt="Medicine" title="Medicine">
+            <br>
+        </div>
+        <button type="button" class="collapsible" style="text-align: center"><strong>What is the immune system?</strong></button>
+        <div class="content" style="background-color: #1f1f2e;color:whitesmoke">
+            <br>
+            The immune system protects your body from outside invaders, including germs such as bacteria, viruses, and fungi, and toxins (chemicals made by microbes). The immune system is made up of different organs, cells, and proteins that work together.
+            <br>
+            <br>
+        </div>
+        <button type="button" class="collapsible" style="text-align: center"><strong>What are the two immune system that exist?</strong></button>
+        <div class="content" style="background-color: #1f1f2e;color:whitesmoke">
+            <br>
+            <ul>
+                <li><b>Innate immune system.</b> This immune system is borned naturally in everyone, althought not the same effectiveness.</li>
+                <li><b>Adaptive immune system.</b> You develop this when your body is exposed to microbes or chemicals released by microbes. In other words, this occurs most likely when you are infected with a specific infectious disease, and you develop this adaptive immune system against it. Therefore, your body can easily defend it next time when you get infected again.</li>
+            </ul>
+            <br>
+        </div>
+        <button type="button" class="collapsible" style="text-align: center"><strong>What is the difference between bacteria and virus?</strong></button>
+        <div class="content" style="background-color: #1f1f2e;color:whitesmoke">
+            <br>
+            Viruses are an assembly of different types of molecules that consist of genetic material (either a single- or double-stranded DNA or RNA) with a protein coat and sometimes a layer of fat too (an envelope)
+They can assume different shapes and sizes—spacecraft designs, spirals, cylinders and ball shapes.  <br>
+            Bacteria are prokaryotes—the smallest, simplest and most ancient cells, with free-floating genetic material. These microscopic single-celled organisms can be rod, spiral or spherical in shape.
+
+There are two types of bacteria: Gram-negative and Gram-positive. The key difference is the presence of an extra outer membrane in Gram-negative bacteria. It’s essentially an extra line of defence that makes it harder for antibiotics to penetrate, thus making Gram-negative bacteria more difficult to kill and more prone to developing resistance.<br>
+            With bacteria rapidly developing resistance to antibiotics, it is increasingly important that we know the distinction, because viruses can’t be treated with antibiotics, nor bacteria with antivirals.
+            <br>
+            <br>
+        </div>
+    </div>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            } 
+        });
+        }
+        let mybutton = document.getElementById("myBtn");
+        function scrollFunction() {
+           if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+            } else {
+            mybutton.style.display = "none";
+        }
+            }
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+    
+        
+    <!--FOOTER-->
+    
+    <div style="background-color: white">
+        <br><br>
+        <h2 style="color:#0066ff">Hope you enjoyed playing the game!<br><br>
+            <code>Integrated Science Club Social Media:</code><br>
+            <a href="https://sites.google.com/syss.edu.hk/integrated-science-club/home" target="_blank" rel="noopener noreferrer" class="fa fa-google"></a>        
+            <a href="https://www.instagram.com/syss_is_club/" target="_blank" rel="noopener noreferrer" class="fa fa-instagram"></a><br>
+            <code>CBiology Club Social Media:</code><br>
+            <a href="https://sites.google.com/syss.edu.hk/biology-club" target="_blank" rel="noopener noreferrer" class="fa fa-google" style="background-color:hotpink"></a>
+            <a href="https://www.instagram.com/syss_biology_club/" target="_blank" rel="noopener noreferrer" class="fa fa-instagram"  style="background-color:hotpink"></a><br>
+            <!--https://sites.google.com/syss.edu.hk/chemistry-club-->
+        </h2>
+        <br><br>
+    </div>
+    <div class="bottomBG" >
+        <br>
+    <h5 style="color:black">
+        <br>
+        Website created by <b>Integrated Science Club committee.</b><br>
+        Should you have any enquiries, feel free to contact any of our committee members of both club, or sending an email to sy10236@syss.edu.hk<br>
+        <code>2022-23 Integrated Science Club</code>
+        </h5>
+        <code><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"/></a><br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</code>
+    <br><br><br><br>
+    </div>
+    <!--END OF FOOTER-->
+    <script src="ftest.js"></script>
+</body>
+</html>
