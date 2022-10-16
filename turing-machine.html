@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Turing Machine Simulator</title>
+    <link type="text/css" rel="stylesheet" href="/main.css">
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/L6mkY4V/Photo-from-no-reply-1-removebg-preview.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+    margin: 0;
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+    background-size: cover; 
+    background-position: center center; 
+    text-align:center;
+    height:100%;
+    background-image: url('https://i.ibb.co/Hhzf68r/codingBG.jpg');
+}
+html {
+  scroll-behavior: smooth;
+    height:100%;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #000000;
+    text-align: left;
+    position:fixed;
+    width:100%;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+    .time{
+        background-color: brown;
+        position: fixed;
+        bottom: 0; /* Position the navbar at the top of the page */
+        width: 100%; /* Full width */
+        overflow: hidden;
+    }
+    main {
+        margin-top: 30px; /* Add a top margin to avoid content overlay */
+    }
+    .bottomBG{
+        background-color:#e6e6ff;
+        width:100%;
+        height:auto;
+    }
+    .navbar {
+        background-color: #333;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    .responsiveImg{
+        height: auto;
+        max-width:100%;
+    }
+    .collapsible{
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+    }
+    .active, .collapsible:hover {
+        background-color: #9966ff;
+    }
+
+    .content {
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        background-color: #47476b;
+    }
+    .flameOpacity{
+        transition: opacity 2s;
+    }
+    .setOpacity{
+        opacity:1;
+    }
+    #myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border:  2px solid blue; /* Remove borders */
+  outline: none; /* Remove outline */
+        background-color:lightskyblue;
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 35%; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+    #myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+    }
+    .fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+    .fa-google {
+  background: #dd4b39;
+  color: white;
+}
+    .fa-instagram {
+  background: #125688;
+  color: white;
+}
+canvas {
+    border:3px solid #d3d3d3;
+    background-color: #f1f1f1;
+}
+
+    @media screen and (max-width: 1000px) {
+        .topnav a {
+            float: none;
+            display: block;
+        }
+    }
+    </style>
+</head>
+<body onresize="resized()">
+    <!--INIT-->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <!--END OF INIT-->
+    <h1 style="color:whitesmoke"><big><header><strong>Turing Machine Simulator</strong></header></big></h1>
+    <h3 style="color:chartreuse">
+        <strong>Turing Machine is a powerful machine that runs puring on binary, and can almost do anything!</strong><br>
+    </h3><br>
+    <br>
+    <h2 style="color:white">Input</h2><br>
+    <input type="text" value="" name="text" size="30" id="input" placeholder="1110111100000000"><br>
+    <h2 style="color:white">Code</h2><br>
+    <input type="text" value="" name="text" size="30" id="rule" placeholder="LN0R01;L12R11;R03L12;LN0R0S"><br>
+    <button onclick="compile()">Compile</button>
+    <br><br>
+    <div style="background-color:#bfbfbf">
+        <h2 style="text-align: center">FAQ:</h2>
+        <button type="button" class="collapsible" style="text-align: center"><strong>What is Computer Science?</strong></button>
+        <div class="content" style="background-color: #1f1f2e;color:whitesmoke">
+            <br>
+            Did you know that computer science is also an aspect of integrated science? And it is one of the most interesting as well! Wilhelm Schickard, a german professor designed and constructed the first working mechanical calculator in 1623.
+            <br> <br>
+        </div>
+        <button type="button" class="collapsible" style="text-align: center"><strong>Who is Turing?</strong></button>
+        <div class="content" style="background-color: #1f1f2e;color:whitesmoke"><br>
+            Turing deserved the name of being the "Father of Theoretical Computer Science and Artificial Intelligent(AI)". Turing was highly influential in the development of theoretical computer science, providing a formalisation of the concepts of algorithm and computation with the Turing machine, which can be considered a model of a general-purpose computer. 
+            Read <a href="https://en.wikipedia.org/wiki/Alan_Turing/">more</a>.<br><br>
+        </div>
+        <button type="button" class="collapsible" style="text-align: center"><strong>What is a Turing Machine?</strong></button>
+        <div class="content" style="background-color: #1f1f2e;color:whitesmoke">
+            <br>
+            A Turing machine is a mathematical model of computation describing an abstract machine that manipulates symbols on a strip of tape according to a table of rules. Despite the model's simplicity, it is capable of implementing any computer algorithm.<br>
+            Read <a href="https://plato.stanford.edu/entries/turing-machine/">more</a>.<br><br>
+        </div>
+        <button type="button" class="collapsible" style="text-align: center"><strong>How to use this simulator</strong></button>
+        <div class="content" style="background-color: #1f1f2e;color:whitesmoke">
+            <br>
+            Commands:<br>
+            Each condition consists of 6 characters. 1-3 character represent when the current "memory" is 0, while 4-6 character represent when the current "memory" is 1. It is divided into 2 divisons.<br>
+            For each divison, the first character is the shift pointer direction operator, the second character is the action operator and the last character is the transit-to operator.<br>Between each condition, remember to add a ';'.<br><br>
+            <h3>Shift Pointer Direction Operator:</h3><br>
+            Left:<br>
+            <code>L</code><br>
+            Right:<br>
+            <code>R</code><br>
+            <br>
+            <h3>Action Operator:</h3><br>
+            Set current "memory" to 0:<br>
+            <code>0</code><br>
+            Set current "memory" to 1:<br>
+            <code>1</code><br>
+            Do nothing to current "memory":<br>
+            <code>N</code><br>
+            Terminate program:<br>
+            <code>S</code><br><br>
+            <h3>Transit-To Operator:</h3><br>
+            Be reminded that the first condition is 0.<br>
+            Go to the first condition:<br>
+            <code>0</code>
+            <br><br>
+            <!--(Shift)(Do)(To)-->
+            Here is an example:<br>
+            We assume <b>3</b> to be 3 consecutive '1's, and <b>4</b> to be 4 consecutive '1's.To separate them, we are going to place a '0' between them. So we are going to add those two numbers together by combining them into 1 large consecutive '1's which has 7 '1's.<br>
+            Input:<br>
+            <code>1110111100000000</code><br>
+            Code:<br>
+            <code>LN0R01;L12R11;R03L12;LN0RS0</code><br>
+            If you still have anything regarding this syntax, feel free to email to sy10236@syss.edu.hk<br><br>
+        </div>
+    </div>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            } 
+        });
+        }
+        let mybutton = document.getElementById("myBtn");
+        function scrollFunction() {
+           if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+            } else {
+            mybutton.style.display = "none";
+        }
+            }
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+    
+        
+    <!--FOOTER-->
+    
+    <div style="background-color: white">
+        <br><br>
+        <h2 style="color:#0066ff">Hope you enjoyed playing the game!<br><br>
+            <code>Integrated Science Club Social Media:</code><br>
+            <a href="https://sites.google.com/syss.edu.hk/integrated-science-club/home" target="_blank" rel="noopener noreferrer" class="fa fa-google"></a>        
+            <a href="https://www.instagram.com/syss_is_club/" target="_blank" rel="noopener noreferrer" class="fa fa-instagram"></a><br>
+            <!--https://sites.google.com/syss.edu.hk/chemistry-club-->
+        </h2>
+        <br><br>
+    </div>
+    <div class="bottomBG" >
+        <br>
+    <h5 style="color:black">
+        <br>
+        Website created by <b>Integrated Science Club committee.</b><br>
+        Should you have any enquiries, feel free to contact any of our committee members of both club, or sending an email to sy10236@syss.edu.hk<br>
+        <code>2022-23 Integrated Science Club</code>
+        </h5>
+        <code><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"/></a><br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</code>
+    <br><br><br><br>
+    </div>
+    <!--END OF FOOTER-->
+    <script src="index.js"></script>
+</body>
+</html>
