@@ -107,21 +107,62 @@ function turnOn(){
         on = false;
     }, 5000);
 }
-//unused
-function changeHeader(){
-    var c = document.getElementById("h");
-    sleep(5000);
-    c.innerHTML = "<h4 style=\"color:#0000ff\" id=\"headerText\>Here, we Integrated Science Club created this game for everyone to try recreating the color we provided.</h4>";
-    for(let i = 1.0;i > 0;i-=0.1){
-        c.style.opacity = i;
-        sleep(100);
-    }
-    c.innerHTML = "<h4 style=\"color:#0000ff\" id=\"headerText\>Here, we Integrated Science Club created this game for everyone to try recreating the color we provided.</h4>";
-    for(let i = 0;i < 0;i+=0.1){
-        c.style.opacity = i;
-        sleep(100);
-    }
+function rc(origString, replaceChar, index) {
+    let firstPart = origString.substr(0, index);
+    let lastPart = origString.substr(index + 1);
+      
+    let newString = firstPart + replaceChar + lastPart;
+    return newString;
 }
+function compile(){
+    let e = document.getElementById("input").value;
+    let cc = document.getElementById("rule").value;
+    if(e.length == 0 || cc.length < 6){alert("Invalid.");return;}
+    for(let i = 0;i < e.length;i++)if(e[i] != '0' && e[i] != '1'){alert("Please enter pure Binary(only '0's and '1's).");return;}
+    var c = cc.split(';');
+    let pointer = 0, cPointer = 0;
+    while(true){
+        let f = c[cPointer].substr(0, 3);
+        let s = c[cPointer].substr(3);
+        if(e[pointer]=='0'){
+            if(f[1]=='S'){
+                break;
+            }
+            else if(f[1]!='N'){
+                e = rc(e, f[1], pointer);
+            }
+            cPointer=parseInt(f[2]);
+            if(f[0]=='L'){
+                if(pointer==0){alert("1Out of bounds.");return;}
+                pointer--;
+            }
+            else if(f[0]=='R'){
+                if(pointer==e.length-1){alert("1Out of bounds.");return;}
+                pointer++;
+            }
+        }
+        else{
+            if(s[1]=='S'){
+                break;
+            }
+            else if(s[1]!='N'){
+                e = rc(e, s[1], pointer);
+            }
+            cPointer=parseInt(s[2]);
+            if(s[0]=='L'){
+                if(pointer==0){alert("Out of bounds.");return;}
+                pointer--;
+            }
+            else if(s[0]=='R'){
+                if(pointer==e.length-1){alert("Out of bounds.");return;}
+                pointer++;
+            }
+        }
+        console.log("e " + e + " pointer " + pointer.toString() + " cPointer " + cPointer.toString());
+    }
+    alert(e);
+}
+//unused
 function sleep(milliseconds) {
   const date = Date.now();
   let currentDate = null;
