@@ -112,6 +112,13 @@ html {
     .inputBox:hover{
         height:100px;
     }
+    .compileButton{
+        transition: background-color 2s, color 2s;
+    }
+    .compileButton:hover{
+        background-color: dimgray;
+        color:azure;
+    }
     @keyframes backgroundColorPalette {
   0% {
     background: #ee6055;
@@ -196,8 +203,10 @@ canvas {
     <input type="text" value="" name="text" size=30 id="input" placeholder="1110111100000000" style="background-color:black;border:3px solid blue;border-radius:5%;color:white;font-family:monospace;height:50px;" class="inputBox">
     <br>
     <h2 style="color:steelblue">Code</h2><br>
-    <input type="text" value="" name="text" size=30 id="rule" placeholder="LN0R01;L12R11;R03L12;LN0R0S" style="background-color:black;border:3px solid blue;border-radius:5%;color:white;font-family:monospace;height:50px;"><br><br>
-    <button onclick="compile()">Compile</button>
+    <input type="text" value="" name="text" size=30 id="rule" placeholder="LN0R01;L12R11;R03L12;LN0R0S" style="background-color:black;border:3px solid blue;border-radius:5%;color:white;font-family:monospace;height:50px;"><br><br><br>
+    <button onclick="compile()" style="border: 2px solid dimgray;border-radius:20%;background-color:darkorange;" class="compileButton" draggable="true">
+        <h3>Compile</h3>
+    </button>
     </div>
     <br><br>
     <div style="background-color:#bfbfbf">
@@ -243,7 +252,7 @@ canvas {
         <div class="content" style="background-color: #1f1f2e;color:whitesmoke">
             <br>
             Did you know that computer science is also an aspect of integrated science? And it is one of the most interesting as well! Wilhelm Schickard, a german professor designed and constructed the first working mechanical calculator in 1623.
-            <br> <br>
+            <br><br>
         </div>
         <button type="button" class="collapsible" style="text-align: center"><strong>Who is Turing?</strong></button>
         <div class="content" style="background-color: #1f1f2e;color:whitesmoke"><br>
