@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Turing Machine Simulator</title>
+    <title>💻MyTuringMachine</title>
     <link type="text/css" rel="stylesheet" href="/main.css">
     <link rel="icon" type="image/x-icon" href="https://i.ibb.co/L6mkY4V/Photo-from-no-reply-1-removebg-preview.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,11 @@ body {
     background-position: center center; 
     text-align:center;
     height:100%;
-    background-image: url('https://i.ibb.co/Hhzf68r/codingBG.jpg');
+    background-color: grey;
+    animation-name: backgroundColorPalette;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 html {
   scroll-behavior: smooth;
@@ -23,15 +27,16 @@ html {
 }
 .topnav {
   overflow: hidden;
-  background-color: #000000;
+  background-color: ghostwhite;
     text-align: left;
     position:fixed;
     width:100%;
+    border-bottom: 3px solid darkblue;
 }
 
 .topnav a {
   float: left;
-  color: #f2f2f2;
+  color: black;
   text-align: center;
   padding: 12px;
   text-decoration: none;
@@ -101,6 +106,29 @@ html {
     .setOpacity{
         opacity:1;
     }
+    .inputBox{
+        transition: height 2s;
+    }
+    .inputBox:hover{
+        height:100px;
+    }
+    @keyframes backgroundColorPalette {
+  0% {
+    background: #ee6055;
+  }
+  25% {
+    background: #60d394;
+  }
+  50% {
+    background: #aaf683;
+  }
+  75% {
+    background: #ffd97d;
+  }
+  100% {
+    background: #ff9b85;
+  }
+}
     #myBtn {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
@@ -151,38 +179,31 @@ canvas {
 </head>
 <body onresize="resized()">
     <!--INIT-->
+    <div class="topnav">
+        <a href="https://sites.google.com/syss.edu.hk/integrated-science-club/home"><img src="https://i.ibb.co/L6mkY4V/Photo-from-no-reply-1-removebg-preview.png" style="width:40px;height:40px;"/></a>
+        <code><h2 style="color:black"><strong>💻MyTuringMachine</strong></h2></code>
+    </div>
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     <!--END OF INIT-->
-    <h1 style="color:whitesmoke"><big><header><strong>Turing Machine Simulator</strong></header></big></h1>
-    <h3 style="color:chartreuse">
-        <strong>Turing Machine is a powerful machine that runs puring on binary, and can almost do anything!</strong><br>
+    <br><br><br><br>
+    <div style="height:100%">
+    <h1 style="color:whitesmoke"><big><header><strong>💻MyTuringMachine</strong></header></big></h1>
+    <h3 style="color:indigo">
+        <strong>Turing Machine is a powerful machine that runs purely on binary, and can almost do anything!</strong><br>
     </h3><br>
     <br>
-    <h2 style="color:white">Input</h2><br>
-    <input type="text" value="" name="text" size="30" id="input" placeholder="1110111100000000"><br>
-    <h2 style="color:white">Code</h2><br>
-    <input type="text" value="" name="text" size="30" id="rule" placeholder="LN0R01;L12R11;R03L12;LN0R0S"><br>
+    <h2 style="color:steelblue">Input</h2><br>
+    <input type="text" value="" name="text" size=30 id="input" placeholder="1110111100000000" style="background-color:black;border:3px solid blue;border-radius:5%;color:white;font-family:monospace;height:50px;" class="inputBox">
+    <br>
+    <h2 style="color:steelblue">Code</h2><br>
+    <input type="text" value="" name="text" size=30 id="rule" placeholder="LN0R01;L12R11;R03L12;LN0R0S" style="background-color:black;border:3px solid blue;border-radius:5%;color:white;font-family:monospace;height:50px;"><br><br>
     <button onclick="compile()">Compile</button>
+    </div>
     <br><br>
     <div style="background-color:#bfbfbf">
+        <br>
         <h2 style="text-align: center">FAQ:</h2>
-        <button type="button" class="collapsible" style="text-align: center"><strong>What is Computer Science?</strong></button>
-        <div class="content" style="background-color: #1f1f2e;color:whitesmoke">
-            <br>
-            Did you know that computer science is also an aspect of integrated science? And it is one of the most interesting as well! Wilhelm Schickard, a german professor designed and constructed the first working mechanical calculator in 1623.
-            <br> <br>
-        </div>
-        <button type="button" class="collapsible" style="text-align: center"><strong>Who is Turing?</strong></button>
-        <div class="content" style="background-color: #1f1f2e;color:whitesmoke"><br>
-            Turing deserved the name of being the "Father of Theoretical Computer Science and Artificial Intelligent(AI)". Turing was highly influential in the development of theoretical computer science, providing a formalisation of the concepts of algorithm and computation with the Turing machine, which can be considered a model of a general-purpose computer. 
-            Read <a href="https://en.wikipedia.org/wiki/Alan_Turing/">more</a>.<br><br>
-        </div>
-        <button type="button" class="collapsible" style="text-align: center"><strong>What is a Turing Machine?</strong></button>
-        <div class="content" style="background-color: #1f1f2e;color:whitesmoke">
-            <br>
-            A Turing machine is a mathematical model of computation describing an abstract machine that manipulates symbols on a strip of tape according to a table of rules. Despite the model's simplicity, it is capable of implementing any computer algorithm.<br>
-            Read <a href="https://plato.stanford.edu/entries/turing-machine/">more</a>.<br><br>
-        </div>
+        <br>
         <button type="button" class="collapsible" style="text-align: center"><strong>How to use this simulator</strong></button>
         <div class="content" style="background-color: #1f1f2e;color:whitesmoke">
             <br>
@@ -217,6 +238,26 @@ canvas {
             Code:<br>
             <code>LN0R01;L12R11;R03L12;LN0RS0</code><br>
             If you still have anything regarding this syntax, feel free to email to sy10236@syss.edu.hk<br><br>
+        </div>
+        <button type="button" class="collapsible" style="text-align: center"><strong>What is Computer Science?</strong></button>
+        <div class="content" style="background-color: #1f1f2e;color:whitesmoke">
+            <br>
+            Did you know that computer science is also an aspect of integrated science? And it is one of the most interesting as well! Wilhelm Schickard, a german professor designed and constructed the first working mechanical calculator in 1623.
+            <br> <br>
+        </div>
+        <button type="button" class="collapsible" style="text-align: center"><strong>Who is Turing?</strong></button>
+        <div class="content" style="background-color: #1f1f2e;color:whitesmoke"><br>
+            Turing deserved the name of being the "Father of Theoretical Computer Science and Artificial Intelligent(AI)". Turing was highly influential in the development of theoretical computer science, providing a formalisation of the concepts of algorithm and computation with the Turing machine, which can be considered a model of a general-purpose computer. 
+            Read <a href="https://en.wikipedia.org/wiki/Alan_Turing/">more</a>.<br><br>
+        </div>
+        <button type="button" class="collapsible" style="text-align: center"><strong>What is a Turing Machine?</strong></button>
+        <div class="content" style="background-color: #1f1f2e;color:whitesmoke">
+            <br>
+            A Turing machine is a mathematical model of computation describing an abstract machine that manipulates symbols on a strip of tape according to a table of rules. Despite the model's simplicity, it is capable of implementing any computer algorithm.<br>
+            Read <a href="https://plato.stanford.edu/entries/turing-machine/">more</a>.<br>
+            <img src="https://i.ibb.co/6P2x3vz/1200px-Turing-Machine-Model-Davey-2012.jpg" alt="Turing Machine" title="A Turing Machine in real life."><br>
+            <blockquote>A physical Turing machine model. A true Turing machine would have unlimited tape on both sides, however, physical models can only have a finite amount of tape.</blockquote>
+            <br><br>
         </div>
     </div>
     <script>
@@ -260,9 +301,9 @@ canvas {
         </h2>
         <br><br>
     </div>
-    <div class="bottomBG" >
+    <div class="bottomBG" style="border-top:3px solid rebeccapurple">
         <br>
-    <h5 style="color:black">
+    <h5 style="color:black;">
         <br>
         Website created by <b>Integrated Science Club committee.</b><br>
         Should you have any enquiries, feel free to contact any of our committee members of both club, or sending an email to sy10236@syss.edu.hk<br>
@@ -272,6 +313,6 @@ canvas {
     <br><br><br><br>
     </div>
     <!--END OF FOOTER-->
-    <script src="ftest.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
