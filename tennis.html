@@ -124,8 +124,8 @@
             border-radius:3%;
             background-color: ghostwhite;
             text-align: left;
-            min-height: 500px;
-            height: 500px;
+            min-height: 400px;
+            height: 400px;
         }
         .infoSection:hover{
             box-shadow: 0 2px 2px rgba(0,0,0,0.12), 0 5px 5px rgba(0,0,0,0.12), 0 7px 7px rgba(0,0,0,0.12),  0 10px 10px rgba(0,0,0,0.12), 0 20px 20px rgba(0,0,0,0.12);
@@ -140,6 +140,9 @@
         .infoSectionButton:hover{
             box-shadow: 0 2px 2px rgba(0,0,0,0.12), 0 5px 5px rgba(0,0,0,0.12), 0 7px 7px rgba(0,0,0,0.12),  0 10px 10px rgba(0,0,0,0.12), 0 20px 20px rgba(0,0,0,0.12);
         }
+        .titleText:hover{
+            text-decoration: underline;
+        }
         a:link {
             color: lightcoral;
             background-color: transparent;
@@ -150,15 +153,16 @@
             background-color: transparent;
             text-decoration: none;
         }
-
         a:hover {
             color: lightcoral;
             background-color: transparent;
+            text-decoration: none;
         }
 
         a:active {
             color: yellow;
             background-color: transparent;
+            text-decoration: none;
         }
         @media screen and (max-width: 1000px) {
             .topnav a {
@@ -198,7 +202,7 @@
     <br><br><br>
     <p id="addbr"></p>
     <div style="height:90%;width:auto;">
-        <h1 style="color:lightcoral; position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);"><big><header><strong>Tennis⊥Ball: Tennis Game Simulator</strong></header></big></h1>
+        <h1 style="color:lightcoral; position:absolute;top:50%;left: 50%;transform: translate(-50%, -50%);" class="titleText"><big><header><strong>Tennis⊥Ball: Tennis Game Simulator</strong></header></big></h1>
         <a href="#infoStart" style="position:absolute;bottom:0;"><h1>⇓</h1></a>
     </div>
     <script>
@@ -221,6 +225,15 @@
         function changePage(id){
             for(let i = 1;i < 4;i++)document.getElementById(i).style.backgroundColor = "whitesmoke";
             document.getElementById(id).style.backgroundColor = "azure";
+            if(id=="1"){
+                document.getElementById("desc").innerHTML = "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Tennis_Racket_and_Balls.jpg/220px-Tennis_Racket_and_Balls.jpg\" style=\"float:right;border-radius:10%\">Tennis is a sport played by 2 or 4 players through hitting a ball with a racket. The idea behind tennis is hitting the ball, which is an important aspect of physics, a branch of integrated science. So we Integrated Science Club decided to collaborate with Tennis Club to create this game for students to learn more about both tennis and the mechanism of it.";
+            }
+            else if(id=="2"){
+                document.getElementById("desc").innerHTML = "<img src=\"https://protennistips.net/wp-content/uploads/2015/03/tennis-serve-start.png\" style=\"float:left;border-radius:10%\">The rules are simple. Apply a net force on the ball to change its momentum and return it to the other side. For more information, check <a href=\"https://protennistips.net/tennis-rules/\">this</a> out.";
+            }
+            else if(id=="3"){
+                document.getElementById("desc").innerHTML = "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Addition_of_forces.JPG/350px-Addition_of_forces.JPG\" style=\"float:right;border-radius:10%\">The net force is defined as is the sum of all the forces acting on an object. Net force can accelerate a mass. Some other force acts on a body either at rest or motion. By Newton's Second Law (<strong>F = ma</strong>), when applied a force on an object, in this case a tennis ball, it accelerates. Thus it is able to return to the other side.";
+            }
         }
     </script>
     <div style="background-color:white;text-align: center;border-top:1px solid rebeccapurple;color:cornflowerblue;margin-top:20px;width:100%">
@@ -229,7 +242,9 @@
             <button style="top:8px;left:16px;" class="infoSectionButton" onclick="changePage(2)" id="2"><strong>2</strong></button>
             <button style="top:8px;left:16px;" class="infoSectionButton" onclick="changePage(3)" id="3"><strong>3</strong></button>
             <br>
-            <p id="desc">Tennis is a sport played by 2 players through hitting a ball with a racket. The idea behind tennis is hitting the ball, which is an important aspect of physics, a branch of integrated science. So we Integrated Science Club decided to collaborate with Tennis Club to create this game.</p>
+            <p id="desc">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Tennis_Racket_and_Balls.jpg/220px-Tennis_Racket_and_Balls.jpg" style="float:right;border-radius:10%"> Tennis is a sport played by 2 players through hitting a ball with a racket. The idea behind tennis is hitting the ball, which is an important aspect of physics, a branch of integrated science. So we Integrated Science Club decided to collaborate with Tennis Club to create this game for students to learn more about both tennis and the mechanism of it.
+            </p>
         </div>
         <br><br>
     </div>
