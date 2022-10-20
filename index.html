@@ -1,381 +1,293 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Home</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="https://i.ibb.co/L6mkY4V/Photo-from-no-reply-1-removebg-preview.png">
-<style>    
+    <title>IS CLUB MC: Collection of Science Websites</title>
+    <link type="text/css" rel="stylesheet" href="/main.css">
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/L6mkY4V/Photo-from-no-reply-1-removebg-preview.png">
+    <link href='https://fonts.googleapis.com/css?family=Silkscreen' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="alternate" hreflang="en" href="https://joshuasyss.github.io/is-club-mc.github.io"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A portal to access various games and useful websites related to integrated science."/>
+    <meta name="google-site-verification" content="_lMnBBBWskKou0BtLNYz-dReGEjIcHFir_dyzlUXNcA" />
+    <meta name="author" content="SYSS Integrated Science Club"/>
+    <meta name="keywords" content="science, integrated science, chemistry, physics, biology, games, multiple choice question, mcq, quiz, flame test, turing machine, reaction, reaction time, test, reaction time test, virus defender"/>
+    <meta property="og:site_name" content="IS CLUB MC: Collection of Science Websites"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://joshuasyss.github.io/is-club-mc.github.io"/>
+    <meta property="og:title" content="IS CLUB MC: Collection of Science Websites"/>
+    <meta property="og:description" content="A portal to access various games and useful websites related to integrated science."/>
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="MobileOptimized" content="width">
+<style>
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #e6decf;
+    margin: 0;
+    font-family: 'Silkscreen', 'Kanit', Arial, Helvetica, sans-serif;
+    background-size: cover; 
+    background-position: center center; 
     text-align:center;
+    height:100%;
+    background-color: lightyellow;
+    /*
+    animation-name: backgroundColorPalette;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;*/
 }
-
+    ::selection {
+  /* Change highlight background color to black */
+  background: lightgreen;
+  /* Change highlight text color to red */
+  color: orangered;
+}
+html {
+  scroll-behavior: smooth;
+    height:100%;
+}
 .topnav {
   overflow: hidden;
-  background-color: #000000;
+  background-color: ghostwhite;
     text-align: left;
+    position:fixed;
+    width:100%;
+    border-bottom: 3px solid darkblue;
 }
 
 .topnav a {
   float: left;
-  color: #f2f2f2;
+  color: black;
   text-align: center;
   padding: 12px;
   text-decoration: none;
   font-size: 17px;
 }
 
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
 
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
-}
-    @media screen and (max-width: 500px) {
-  .topnav a {
-    float: none;
-    display: block;
-  }
-}
-    .time{
-        background-color: brown;
-        position: fixed;
-        bottom: 0; /* Position the navbar at the top of the page */
-        width: 100%; /* Full width */
-        overflow: hidden;
-    }
-    .main {
-  margin-top: 30px; /* Add a top margin to avoid content overlay */
-}
-    .question{
-        background-color:#ffffb3;
-        width: 75%;
-        margin: auto;
-        padding: 10px;
-        text-align: left;
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+    main {
+        margin-top: 30px; /* Add a top margin to avoid content overlay */
     }
     .bottomBG{
-        background-color:#e6e600;
+        background-color:#e6e6ff;
         width:100%;
         height:auto;
+        text-align: left;
     }
-    /* width */
-::-webkit-scrollbar {
-  width: 20px;
+    .navbar {
+        background-color: #333;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    .responsiveImg{
+        height: auto;
+        max-width:100%;
+    }
+    .collapsible{
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+    }
+    .active, .collapsible:hover {
+        background-color: #9966ff;
+    }
+    .fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
 }
-/* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
-  border-radius: 10px;
+    .fa-google {
+  background: #dd4b39;
+  color: white;
 }
+    .fa-instagram {
+  background: #125688;
+  color: white;
+}
+.column {
+  float: center;
+  width: 40%;
+  padding: 0 16px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.12),  0 8px 8px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12);
+    margin: 20px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+    border-radius:5%;
+}
+    .column:hover{
+        border: 4px solid black;
+    }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: grey;
-  border-radius: 10px;
-}
-</style>
+    @media screen and (max-width: 1000px) {
+        .topnav a {
+            float: none;
+            display: block;
+        }
+    }
+    @media screen and (max-width: 650px) {
+        .column {
+            width: 100%;
+            display: block;
+        }
+    }
+    .autocomplete{
+        
+    }
+    </style>
 </head>
-<body>
+<body onresize="resized()">
+    <!--INIT-->
     <div class="topnav">
         <a href="https://sites.google.com/syss.edu.hk/integrated-science-club/home"><img src="https://i.ibb.co/L6mkY4V/Photo-from-no-reply-1-removebg-preview.png" style="width:40px;height:40px;"/></a>
-        <code><h1 style="color:white"><strong>2022 - 2023 Integrated Science Club</strong></h1></code>
+        <code><h2 style="color:black"><strong>IS Club Multimedia Collection</strong></h2></code>
     </div>
-    <div class="time">
-        <h2 style="color:white" id="d"></h2>
-        <script>
-            function callTime(){
-                let timeDisplay = document.getElementById("d");
-                let dateString = new Date().toLocaleString();
-                let formattedString = dateString.replace(", ", " - ");
-                formattedString = formattedString.replace("/", ".");
-                formattedString = formattedString.replace("/", ".");
-                timeDisplay.textContent = formattedString;
-            }
-            setInterval(callTime, 1000);
-        </script>
-    </div>
-    <h1 style="color:darkred"><code><strong>Multiple Choice Quiz by Integrated Science Club</strong></code></h1>
-    <script>
-        let e = ["<h4 style=\"color:#0000ff\">This is a collection of multiple choice questions related to Integrated Science. Feel free to propose more problems to us!</h4>", "<h4 style=\"color:#996633\">Also, please avoid searching online or reading related material while answering. You might learn more here than just getting the answer correct!</h4>", "Check out our official website <a href=\"https://sites.google.com/syss.edu.hk/integrated-science-club/home\">here</a>!"];
-        let n = 0;
-        function changeText(){
-            document.getElementById("e").innerHTML = e[n++];
-            if(n==3)n=0;
-        }
-        setInterval(changeText, 5000);
-    </script>
-    <h4 style="color:#0000ff" id = "e">This is a collection of multiple choice questions related to Integrated Science. Feel free to propose more problems to us!</h4>
-    <code>Please select <mark>1</mark> answer.</code>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <!--END OF INIT-->
     <br><br><br>
-    <div class="question">
-        1.
-        <h3><strong>Which of the following is the equation for calculating BMI(Body Mass Index)?</strong></h3>
-        <h5>Fun Fact: Pay attention if your BMI is >= 27.5, since it causes diabetes and certain cancers!</h5>
-        <!--template-->
-        <br>
-        <label for="c">Select:</label>
-        <select name="c" id="1" single>
-            <option value="A">Weight / Height ^ 2</option>
-            <option value="B">(Weight ^ 2) * Height</option>
-            <option value="C">Weight * Height * π</option>
-            <option value="D">Weight / Height</option>
-        </select>
-        <br><br>
-        <script>
-        function getInputValue() {
-            let value = document.getElementById("1").value;
-            if(value=="A"){
-                alert("Correct! BMI measures the relationship between your weight and height to calculate the amount of body fat you have. The higher your BMI, the higher the amount of fat in your body.");
-            }
-            else if(value=="B"){
-                alert("Wrong. Think again, if you have 5.24 kg, by your selected formula you are obese already...");
-            }
-            else if(value=="C"){
-                alert("Wrong! We are calculating the body mass, not the volume(even if isn't calculated by this way).");
+    <p id="addbr"></p>
+    <div style="height:20%">
+    <h1 style="color:black;"><big><header><strong>Sing Yin Secondary School Integrated Science Club<br>Multimedia Collection</strong></header></big></h1>
+    <h3 style="color:indigo">
+        Gain Access to all multimedia website created by Integrated Science Club here!
+    </h3>
+    <script>
+        function resized(){
+            var w = window.innerWidth;
+            if(w <= 505){
+                document.getElementById("addbr").innerHTML = "<p id=\"addbr\"><br><br><br><br><br><br><br></p>";
             }
             else{
-                alert("Wrong! Try inputting your weight and height to see does it make sense.");
+                document.getElementById("addbr").innerHTML = "<p id=\"addbr\"></p>";
             }
         }
-        </script>
-        <button type="button" onclick="getInputValue();">Submit</button>
-        <!--template ends-->
+    </script>
     </div>
-    <br><br>
-    <div class="question">
-        2.
-        <h3><strong>How many bones human have?</strong></h3>
-        <h5>Fun Fact: A cubic inch of bone can in principle bear a load of 19,000 lbs. (8,626 kg) or more — roughly the weight of five standard pickup trucks — making it about four times as strong as concrete!</h5>
-        <!--template-->
-        <br>
-        <label for="c1">Select:</label>
-        <select name="c1" id="2" single>
-            <option value="A">350</option>
-            <option value="B">206</option>
-            <option value="C">428</option>
-            <option value="D">133</option>
-        </select>
+    
+    <div style="background-color:white;border-top:1px solid rebeccapurple;text-align: center;color:darkgray;margin-top:20px;width:100%">
         <br><br>
-        <script>
-        function getInputValue2() {
-            let value = document.getElementById("2").value;
-            if(value=="A"){
-                alert("Wrong.");
-            }
-            else if(value=="B"){
-                alert("Correct! There are typically around 270 bones in human infants, which fuse to become 206 to 213 bones in the human adult.");
-            }
-            else if(value=="C"){
-                alert("Wrong.");
-            }
-            else{
-                alert("Wrong.");
-            }
-        }
-        </script>
-        <button type="button" onclick="getInputValue2();">Submit</button>
-        <!--template ends-->
+        <strong>Website and Projects Proudly Presented to you by Integrated Science Club</strong>
+        <a href="https://sites.google.com/syss.edu.hk/integrated-science-club/home" target="_blank" rel="noopener noreferrer">
+        <div class="column" style="background-color:lightcyan;margin-top:20px">
+            
+            <br>
+            <img src="https://i.ibb.co/L6mkY4V/Photo-from-no-reply-1-removebg-preview.png" alt="IS Main Website" title="IS Main Website" style="width:300px;height:auto;">
+            <br>
+            <h2 style="color:black;text-align:left;"><strong><code>Official Website</code></strong></h2><br>
+            <p style="text-align: left;">The official website of Sing Yin Secondary School Integrated Science Club. You can view not only our objectives, and even hands-on experiment dates.</p>
+            <br><br>
+            
+        </div>
+            </a>
+        <a href="https://joshuasyss.github.io/is-club-mc.github.io/MCQ.html" target="_blank" rel="noopener noreferrer">
+            <div class="column" style="background-color:floralwhite">
+            <br>
+            <img src="https://i.ibb.co/L6mkY4V/Photo-from-no-reply-1-removebg-preview.png" alt="IS MCQ" title="IS MCQ" style="width:300px;height:auto;">
+            <br>
+            <h2 style="color:black;text-align:left;"><strong><code>MCQ</code></strong></h2><br>
+            <p style="text-align: left;">A collection of multiple choice problems related to integrated science presented in our Annual General Meeting.</p>
+            <br><br>
+            </div>
+        </a>
+        <a href="https://joshuasyss.github.io/is-club-mc.github.io/rgb-game.html" target="_blank" rel="noopener noreferrer">
+            <div class="column" style="background-color:lightyellow">
+                <br>
+                <img src="https://i.ibb.co/6FQ9D21/rgb-1.png" alt="RGB Game" title="RGB Game" style="width:300px;height:auto;border-radius:10%">
+                <br>
+                <h2 style="color:black;text-align:left;"><strong><code>RGB Game</code></strong></h2><br>
+                <p style="text-align: left;">Mix red, green and blue color to replicate the problem's color!</p>
+                <br><br>
+            </div>
+        </a>
+        <a href="https://testreactiontime.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <div class="column" style="background-color:lightcoral">
+                <br>
+                <img src="https://i.ibb.co/Jz8jXKn/reaction-Time-Logo-removebg-preview.png" alt="👍ReactionTime!" title="👍ReactionTime!" style="width:300px;height:auto;border-radius:10%">
+                <br>
+                <h2 style="color:black;text-align:left;"><strong><code>👍ReactionTime!</code></strong></h2><br>
+                <p style="text-align: left;">Test and learn about reaction time.</p>
+                <br><br>
+            </div>
+        </a>
+        <a href="https://myturingmachine.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <div class="column" style="background-color:lightseagreen">
+                <br>
+                <img src="https://i.ibb.co/6P2x3vz/1200px-Turing-Machine-Model-Davey-2012.jpg" alt="💻 MyTuringMachine" title="💻 MyTuringMachine" style="width:300px;height:auto;border-radius:10%">
+                <br>
+                <h2 style="color:black;text-align:left;"><strong><code>💻 MyTuringMachine</code></strong></h2><br>
+                <p style="text-align: left;">Perform actions that modern computer has the ability to do with simple steps.</p>
+                <br><br>
+            </div>
+        </a>
+        <br><br>
+        <strong>Useful Links related to Integrated Science</strong>
+        <br><br>
+        <a href="https://www.youtube.com/watch?v=IrdYueB9pY4&t=468s&ab_channel=NileRed" target="_blank" rel="noopener noreferrer">
+            <div class="column" style="background-color:fuchsia;margin-top:20px">
+                <br>
+                <img src="https://i.ibb.co/23rqGpY/mercury.png" alt="Mercury" title="Mercury" style="width:300px;height:auto;border-radius:10%">
+                <br>
+                <h2 style="color:black;text-align:left;"><strong><code>Growing Metal Exists?</code></strong></h2><br>
+                <p style="text-align: left;">Learn why you cannot bring mercury on plane.</p>
+                <br><br>
+            </div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=DHtNrH3P2zU&ab_channel=NileRedShorts" target="_blank" rel="noopener noreferrer">
+            <div class="column" style="background-color:black;color:whitesmoke;border-color:cornflowerblue">
+                <br>
+                <img src="https://live.staticflickr.com/8498/8330331867_5751c09f62_b.jpg" alt="White Flame" title="White Flame" style="width:300px;height:auto;border-radius:10%">
+                <br>
+                <h2 style="text-align:left;"><strong><code>White Flame!</code></strong></h2><br>
+                <p style="text-align: left;">It looks fake but it is real! Click to learn more.</p>
+                <br><br>
+            </div>
+        </a>
+        <a href="https://www.slashgear.com/818664/what-the-recent-finding-of-ice-volcanoes-on-pluto-actually-means/" target="_blank" rel="noopener noreferrer">
+            <div class="column" style="background-color:cadetblue;">
+                <br>
+                <img src="https://i.natgeofe.com/n/d37ef874-0dc6-4cd4-b244-74d6b3f7232c/Pluto4.jpg" alt="Pluto" title="Pluto" style="width:300px;height:auto;border-radius:10%">
+                <br>
+                <h2 style="text-align:left;"><strong><code>Did you know ice volcanoes are real?</code></strong></h2><br>
+                <p style="text-align: left;">Click here to learn more!</p>
+                <br><br>
+            </div>
+        </a>
+        <br>
     </div>
-    <br><br>
-    <div class="question">
-        3.
-        <h3><strong>There are 118 elements.</strong></h3>
-        <h5>Fun Fact: The periodic table might seem only to be ordered in proton numbers, but it actually holds a lot of secret within!</h5>
-        <!--template-->
+        
+    <!--FOOTER-->
+    <div class="bottomBG" style="border-top:3px solid rebeccapurple;padding:10px">
         <br>
-        <label for="c">Select:</label>
-        <select name="c" id="3" single>
-            <option value="A">True</option>
-            <option value="B">False</option>
-        </select>
-        <br><br>
-        <script>
-        function getInputValue3() {
-            let value = document.getElementById("3").value;
-            if(value=="A"){
-                alert("Correct! A chemical element, often simply called an element, is a type of atom which has the same number of protons in its atomic nucleus (i.e., the same atomic number, or Z).");
-            }
-            else if(value=="B"){
-                alert("Wrong.");
-            }
-        }
-        </script>
-        <button type="button" onclick="getInputValue3();">Submit</button>
-        <!--template ends-->
-    </div>
-        <br><br>
-    <div class="question">
-        4.
-        <h3><strong>We use wet litmus paper to test the pH(Potential of Hydrogen) value.</strong></h3>
-        <h5>Fun Fact: The periodic table might seem only to be ordered in proton numbers, but it actually holds a lot of secret within!</h5>
-        <!--template-->
+    <h5 style="color:black;">
         <br>
-        <label for="c">Select:</label>
-        <select name="c" id="4" single>
-            <option value="A">True</option>
-            <option value="B">False</option>
-        </select>
-        <br><br>
-        <script>
-        function getInputValue4() {
-            let value = document.getElementById("4").value;
-            if(value=="A"){
-                alert("Correct! pH is a measure of how acidic/basic water is. The range goes from 0 to 14, with 7 being neutral. pHs of less than 7 indicate acidity, whereas a pH of greater than 7 indicates a base. pH is really a measure of the relative amount of free hydrogen and hydroxide ions in the water.");
-            }
-            else if(value=="B"){
-                alert("Wrong.");
-            }
-        }
-        </script>
-        <button type="button" onclick="getInputValue4();">Submit</button>
-        <!--template ends-->
-    </div>
-    <br><br>
-    <div class="question">
-        5.
-        <h3><strong>Blood is alkaline(pH > 8).</strong></h3>
-        <h5>Fun Fact: Blood is mostly liquid, with numerous cells and proteins suspended in it, making blood "thicker" than pure water!</h5>
-        <!--template-->
-        <br>
-        <label for="c">Select:</label>
-        <select name="c" id="5" single>
-            <option value="A">True</option>
-            <option value="B">False</option>
-        </select>
-        <br><br>
-        <script>
-        function getInputValue5() {
-            let value = document.getElementById("5").value;
-            if(value=="A"){
-                alert("Wrong. But I don't suggest tasting your own blood just to prove yourself correct/wrong...");
-            }
-            else if(value=="B"){
-                alert("Correct! Blood pH value is 7.4.");
-            }
-        }
-        </script>
-        <button type="button" onclick="getInputValue5();">Submit</button>
-        <!--template ends-->
-    </div>
-        <br><br>
-        <div class="question">
-        6.
-        <h3><strong>When two objects are in contact, one loses some charge and the other object must recieve the same charge.</strong></h3>
-        <h5>Fun Fact: Electric charge can be positive or negative (commonly carried by protons and electrons respectively). Like charges repel each other and unlike charges attract each other!</h5>
-        <!--template-->
-        <br>
-        <label for="c">Select:</label>
-        <select name="c" id="6" single>
-            <option value="A">True</option>
-            <option value="B">False</option>
-        </select>
-        <br><br>
-        <script>
-        function getInputValue6() {
-            let value = document.getElementById("6").value;
-            if(value=="A"){
-                alert("Correct! By Conservation of electric charge, the total electric charge of an isolated system remains constant regardless of changes within the system itself.");
-            }
-            else if(value=="B"){
-                alert("Wrong.");
-            }
-        }
-        </script>
-        <button type="button" onclick="getInputValue6();">Submit</button>
-        <!--template ends-->
-    </div>
-    <br><br>
-        <div class="question">
-        7.
-        <h3><strong>Which of the following is <i>not</i> a part of the digestive system?</strong></h3>
-        <h5>Fun Fact: Did you know that each part of your digestive system helps to move food and liquid through your GI tract, break food and liquid into smaller parts, or both.</h5>
-        <!--template-->
-        <br>
-        <label for="c">Select:</label>
-        <select name="c" id="7" single>
-            <option value="A">Liver</option>
-            <option value="B">Small Intestine</option>
-            <option value="C">Lungs</option>
-            <option value="D">Stomach</option>
-        </select>
-        <br><br>
-        <script>
-        function getInputValue7() {
-            let value = document.getElementById("7").value;
-            if(value=="A"){
-                alert("Wrong. Your liver makes a digestive juice called bile that helps digest fats and some vitamins. Bile ducts carry bile from your liver to your gallbladder for storage, or to the small intestine for use.");
-            }
-            else if(value=="B"){
-                alert("Wrong. Your small intestine makes digestive juice, which mixes with bile and pancreatic juice to complete the breakdown of proteins, carbohydrates, and fats. Bacteria in your small intestine make some of the enzymes you need to digest carbohydrates. Your small intestine moves water from your bloodstream into your GI tract to help break down food. Your small intestine also absorbs water with other nutrients.");
-            }
-            else if(value=="C"){
-                alert("Correct! The lungs are a pair of spongy, air-filled organs located on either side of the chest (thorax). The trachea (windpipe) conducts inhaled air into the lungs through its tubular branches, called bronchi. The bronchi then divide into smaller and smaller branches (bronchioles), finally becoming microscopic.");
-            }
-            else{
-                alert("Wrong. Glands in your stomach lining make stomach acid and enzymes that break down food. Muscles of your stomach mix the food with these digestive juices.");
-            }
-        }
-        </script>
-        <button type="button" onclick="getInputValue7();">Submit</button>
-        <!--template ends-->
-    </div>
-        <br><br>
-        <div class="question">
-        8.
-        <h3><strong>Which of the following doesn't consists in an atom?</strong></h3>
-        <h5>Fun Fact: Did you know that an atom is the smallest unit of ordinary matter that forms a chemical element. Everything(including you!) is made up of a lot of atoms!</h5>
-        <!--template-->
-        <br>
-        <label for="c">Select:</label>
-        <select name="c" id="8" single>
-            <option value="A">Electron</option>
-            <option value="B">Proton</option>
-            <option value="C">Neon</option>
-            <option value="D">Neutron</option>
-        </select>
-        <br><br>
-        <script>
-        function getInputValue8() {
-            let value = document.getElementById("8").value;
-            if(value=="A"){
-                alert("Wrong. The electron is a subatomic particle (denoted by the symbol e− or β−) whose electric charge is negative one elementary charge.");
-            }
-            else if(value=="B"){
-                alert("Wrong. A proton is a stable subatomic particle, symbol p, H+, or 1H+ with a positive electric charge of +1 e elementary charge.");
-            }
-            else if(value=="C"){
-                alert("Correct! Neon is a colorless, odorless, inert monatomic gas under standard conditions, and is made up of atoms!");
-            }
-            else{
-                alert("Wrong. The neutron is a subatomic particle, symbol n or n0, which has a neutral (not positive or negative) charge");
-            }
-        }
-        </script>
-        <button type="button" onclick="getInputValue8();">Submit</button>
-        <!--template ends-->
-    </div>
-    <br><br>
-    <h2 style="color:#0066ff">Did you enjoy the problems we provided? These problems are provided during our annual general meeting(2022-23), which even have prize given to winners!</h2><br>
-    <h2 style="color:#00cc99">Consider joining our club to enjoy more problems related to integrated science, and join events held by us!
-    <br>
-        View more details <a href="https://sites.google.com/syss.edu.hk/integrated-science-club/home">here</a>
-    </h2>
-    <div class="bottomBG">
-        <br>
-    <h5 style="color:black"><footer>
-        Website created by <b>5D Choi Kui Wang(2022-23 Integrated Science Club Secretary)</b>.<br>
-        Problems suggested and reviewed by <b>5B Hon Kin Lok(2022-23 Integrated Science Club Treasurer)</b> and <b>5D So Lok Hang(2022-23 Integrated Science Club Chairman).</b><br>
-        Should you have any enquiries about this website, problems, other problems about Integrated Science or regarding our club, feel free to contact any of our committee members, or sending an email to sy10236@syss.edu.hk<br>
+        Website created by <b>Integrated Science Club committee.</b><br>
+        Should you have any enquiries, feel free to contact any of our committee members, or sending an email to sy10236@syss.edu.hk<br>
         <code>2022-23 Integrated Science Club</code>
-        </footer></h5>
-    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"/></a><br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-    <br><br><br><br><br><br>
+        </h5>
+        <code><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"/></a><br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</code><br>
+        <a href="https://sites.google.com/syss.edu.hk/integrated-science-club/home" target="_blank" rel="noopener noreferrer" class="fa fa-google"></a>        
+        <a href="https://www.instagram.com/syss_is_club/" target="_blank" rel="noopener noreferrer" class="fa fa-instagram"></a><br>
+        <br><br><br>
     </div>
+    <!--END OF FOOTER-->
+    <script src="index.js"/>
 </body>
 </html>
