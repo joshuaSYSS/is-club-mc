@@ -99,9 +99,9 @@
         .infoSection {
             float: center;
             width: 40%;
-            padding: 0 16px;
+            /*padding: 0 16px;*/
             box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.12),  0 8px 8px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12);
-            margin: 20px;
+            /*margin: 20px;*/
             display: block;
             margin-left: auto;
             margin-right: auto;
@@ -195,11 +195,61 @@
     <script>
         function resized(){
             var w = window.innerWidth;
+            console.log(w);
             if(w <= 505){
                 document.getElementById("addbr").innerHTML = "<p id=\"addbr\"><br><br><br><br><br><br><br></p>";
             }
             else{
                 document.getElementById("addbr").innerHTML = "<p id=\"addbr\"></p>";
+            }
+            if(w < 380){
+                document.getElementById("infoStart").style.height = "1500px";
+            }
+            else if(w < 397){
+                document.getElementById("infoStart").style.height = "1000px";
+            }
+            else if(w < 416){
+                document.getElementById("infoStart").style.height = "950px";
+            }
+            else if(w < 464){
+                document.getElementById("infoStart").style.height = "900px";
+            }
+            else if(w < 497){
+                document.getElementById("infoStart").style.height = "850px";
+            }
+            else if(w < 505){
+                document.getElementById("infoStart").style.height = "750px";
+            }
+            else if(w < 532)
+            {
+                document.getElementById("infoStart").style.height = "700px"
+            }
+            else if(w < 566){
+                document.getElementById("infoStart").style.height = "690px";
+            }
+            else if(w < 572){
+                document.getElementById("infoStart").style.height = "680px";
+            }
+            else if(w < 650){
+                document.getElementById("infoStart").style.height = "660px";
+            }
+            else if(w < 686){
+                document.getElementById("infoStart").style.height = "625px";
+            }
+            else if(w < 719){
+                document.getElementById("infoStart").style.height = "600px";
+            }
+            else if(w < 737){
+                document.getElementById("infoStart").style.height = "570px";
+            }
+            else if(w < 872){
+                document.getElementById("infoStart").style.height = "550px";
+            }
+            else if(w < 1113){
+                document.getElementById("infoStart").style.height = "500px";
+            }
+            else{
+                document.getElementById("infoStart").style.height = "500px";
             }
         }
         function scrollChange() {
@@ -223,7 +273,7 @@
             }
         }
     </script>
-    <div style="background-color:white;text-align: center;border-top:1px solid rebeccapurple;color:cornflowerblue;margin-top:20px;width:100%">
+    <div style="background-color:white;text-align:center;border-top:1px solid rebeccapurple;color:cornflowerblue;margin-top:20px;width:100%;position:relative">
         <h3 style="color:darkcyan">
             Information
         </h3>
