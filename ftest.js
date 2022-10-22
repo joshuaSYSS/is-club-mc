@@ -100,6 +100,7 @@ function turnOn(){
             mg += " bluish-green flame.";
         }
         alert(mg);
+        document.getElementById("turnOnButtonD").disabled = false;
         document.getElementById("flame").style = "opacity:0;transition:opacity:2s;";
         document.getElementById("flame").className = document.getElementById("flame").className.substr(0, document.getElementById("flame").className.length - 11);
         document.getElementById("flame").src = "https://i.ibb.co/dPXPCqV/bunsen-Burner-Flame.png";
