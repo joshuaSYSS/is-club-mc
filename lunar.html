@@ -3,21 +3,21 @@
 <head>
     <title>Lunar: Explore The Solar System</title>
     <link type="text/css" rel="stylesheet" href="main.css">
-    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/L6mkY4V/Photo-from-no-reply-1-removebg-preview.png">
+    <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/The_Blue_Marble_%28remastered%29.jpg/1024px-The_Blue_Marble_%28remastered%29.jpg">
     <link href='https://fonts.googleapis.com/css?family=IM Fell English SC' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="alternate" hreflang="en" href="https://joshuasyss.github.io/is-club-mc.github.io"/>
+    <link rel="alternate" hreflang="en" href="https://joshuasyss.github.io/is-club-mc.github.io/lunar.html"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A portal to access various games and useful websites related to integrated science."/>
+    <meta name="description" content="Learn more about space."/>
     <meta name="google-site-verification" content="_lMnBBBWskKou0BtLNYz-dReGEjIcHFir_dyzlUXNcA" />
     <meta name="author" content="SYSS Integrated Science Club"/>
     <meta name="keywords" content="science, integrated science, club, sing yin secondary school, syss, https://joshuasyss.github.io/is-club-mc.github.io/ , 聖言中學, astronomy, space"/>
     <meta property="og:site_name" content="Lunar: Explore The Solar System"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://joshuasyss.github.io/is-club-mc.github.io"/>
+    <meta property="og:url" content="https://joshuasyss.github.io/is-club-mc.github.io/lunar.html"/>
     <meta property="og:title" content="Lunar: Explore The Solar System"/>
-    <meta property="og:description" content=""/>
+    <meta property="og:description" content="Learn more about space."/>
     <meta name="HandheldFriendly" content="true"/>
     <meta name="MobileOptimized" content="width">
     <style>
@@ -75,6 +75,7 @@
             bottom: 0;
             position:relative;
             color: aliceblue;
+            margin-top: 50px;
         }
         .navbar {
             background-color: #333;
@@ -172,11 +173,9 @@
             max-height:100%;
             border-radius:10%;
         }
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
         <!--https://i.ibb.co/Bf4Fzvb/istockphoto-876037616-170667a-removebg-preview.png-->
         @keyframes example {
             from {transform: rotate(0deg);}
@@ -203,7 +202,7 @@
     <!--INIT-->
     <script>
         function desc(id){
-            for(let i = 0;i < 7;i++){
+            for(let i = 0;i < 10;i++){
                 var c = document.getElementById(i.toString());
                 if(i != id){
                     c.style.maxHeight = null;
@@ -236,7 +235,7 @@
         <br>
         <br>
         <br>
-        <img src="https://i.natgeofe.com/n/c6f7cee9-cde6-44a2-a686-9a80f5bfc1e8/01_mercury_pia15190_orig.jpg" style="width:70px;height:70px" onclick="desc(1)" draggable="false" class="responsiveImg planet" >
+        <img src="https://i.natgeofe.com/n/c6f7cee9-cde6-44a2-a686-9a80f5bfc1e8/01_mercury_pia15190_orig.jpg" style="width:70px;height:70px" onclick="desc(1)" draggable="false" class="responsiveImg planet" id="mercury">
         <h3 id="1" class="descText">
             <strong style="color:lightyellow">✦</strong> Mass: 3.3×10^23 kg (0.055 Earths)<br>
             <strong style="color:lightyellow">✦</strong> Diameter: 4880 km<br>
@@ -247,7 +246,7 @@
         <br>
         <br>
         <br>
-        <img src="https://cdn.mos.cms.futurecdn.net/RifjtkFLBEFgzkZqWEh69P.jpg" style="width:260px;height:140px" onclick="desc(2)" draggable="false" class="responsiveImg planet">
+        <img src="https://cdn.mos.cms.futurecdn.net/RifjtkFLBEFgzkZqWEh69P.jpg" style="width:260px;height:140px" onclick="desc(2)" draggable="false" class="responsiveImg planet" id="venus">
         <h3 id="2" class="descText">
             <strong style="color:lightyellow">✦</strong> Mass: 4.8675×10^24 kg (0.815 Earths)<br>
             <strong style="color:lightyellow">✦</strong> Diameter: 12,103.6 ± 2.0 km<br>
@@ -258,7 +257,7 @@
         <br>
         <br>
         <br>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/The_Blue_Marble_%28remastered%29.jpg/1024px-The_Blue_Marble_%28remastered%29.jpg" style="width:171.779px;height:171.779px" onclick="desc(3)" draggable="false" title="The Blue Marble" class="responsiveImg planet">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/The_Blue_Marble_%28remastered%29.jpg/1024px-The_Blue_Marble_%28remastered%29.jpg" style="width:171.779px;height:171.779px" onclick="desc(3)" draggable="false" title="The Blue Marble" class="responsiveImg planet" id="earth">
         <h3 id="3" class="descText">
             <strong style="color:lightyellow">✦</strong> Mass: 5.97217×10^24 kg (1 Earth)<br>
             <strong style="color:lightyellow">✦</strong> Diameter: 12,742 km<br>
@@ -272,7 +271,7 @@
         <br>
         <br>
         <br>
-        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAKAAoAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAAAQIDBAUGBwj/xAA4EAABAwMDAgMGAwYHAAAAAAABAAIDBBEhBRIxQVEGImETFHGBkdEHMoIjQlJTobEVJENisuHw/8QAGgEAAwEBAQEAAAAAAAAAAAAAAAMEAgEFBv/EACERAAMBAQABBQADAAAAAAAAAAABAgMRIQQSEzFBFFFh/9oADAMBAAIRAxEAPwDw1CEIAEIQgAQhKgBEqApoaWec2iie75IAhRZbNP4cr5rHa1gPdaEPgusePNKB+lAHLWRZdefAdba7Z2n9Kq1HgrV4hdrGSD0NijoHNJFdrNNraNxFVSzRgfvFmPrwqhA6IAahKhACIQhAAhCEACEIQAIQlCAAKzR0U1Y7bC3Hey0NG0Z9W4STXbF0/wBy7KioY4GBsbAAOiG0gS79GJpvhuJm1843u9V01BpjANscYaO9lNFGLjdx2WrTAMAsAk1qiiMWxtPQNYBcD6K8yCOMcfVOa/GAnElwykvdIpn0tMYZWNbYD+irve83HIVn2N8lMftZylPf+hy9JxeSm+Bsgs9gcD0IXOaz4Moqy8lMPdpjm7B5T8R9l1kkrIx5yAE7YHNBBuCF1b0jlekh+DxjV9ErdKkIqoT7PpK3LT9vmswj0XuU8EUzXRSMa8HkOFwuB8V+EfdGPrdLaTCMyQ87PVvp6KrPVUQ7YPN+DikicRbqkTicRCEIAEIQgAWtoune9SiSUfs2nr1VCliM0gbbqux02lZHGy/NlxviOpdNOmj8rWx3sOAAtGGA2ymUzLWV+JlypNLL8cUOgiDeiuRMTWs2gKLe/wBqdhsFP9lq5CNFjBbKksLYTKSlf7EOmebngKyxjWNIaBnqkUyyJbXeEJBHCr1URkkLRgWuVO4neLpxNyhPgXHfBTmpTIwNPNuisRwezha2+ArLA0kXOE57CLC2F133wZWKXkpbAcpwZnIvcqZ0Y6JRHkLc2KvI8x8deFPdHP1TTogKYm80bf8ATP8AEB2/t8FwxX0SYGSNcyaNr4ngtexwuHNPII7LxPxhoh0HW5qRu51OfPTvP7zDx8xwfgvRx0964eL6jH468fRgoQhOJwSpFJC3dI1vqgDa0OkyHu65XW0sILmgjhZOjQ+UYXRUzLWSdKKMp6W6dllfhZ3VaEK5F+VR0z0s0Mu9zy21h0Knp4A6QNd+UHJSxM62VhmEun48Dojz1lkvuR2HCkD7jICgCcDZTtF8sZOM4TRcJ58xv2TWNcXm5HddRl/Y5nqpo2m2SUgjzdStC502pE25StZc5TgE8BdRmpB0fkwuN/EzRvf9A98Yy89F579Sw/m+/wAl2od07hRPjjqIpKeZocyRpjkBFw5pFiPoqsL5R53rMvdDPmxwsUit6rSOoNSq6N1708z4jfk2JCqL0zwgVrT2b6lo9VVV/RxepCAO002LbG0DstunbwszTbbBda8NsKbQtxLUbVaiFwoYuFYZhSUejmidos1OamtOEWN8JTKkuEgdYp9i7hRhvdTMwsMZKHxxWAu4k9yprAcBI1wIT1jo5JIalCEtlw6Kn3xZNSdV0yxHHKA7I7pHBNOM/BMh8ZNtPZPHfxRphT+Lp5G3/wAxEyX522n/AIrkV3/4wgf4tpzgMupTc/rcuAXsw+yj5m1ymgV/SDap+KoK1pz9lUz1K0ZPQNON2j4LYgGAsHT5A1o+AWoyoIttU+klWN8Rrx4yrMdicZWZFOXNvfrbClbO+Mh18cFTVBfGvDTA7qRvxwsv302uTb4JW6gXHY1t7jlL+NlC3k1XSsjja+QlocQBhTtAKzmvElGWuN7Dgq1E/exjvTulVI+NOsstcGlP34VYOwgvWOD/AHFtrgnX7Km1xsne0I6rjR1V0tbsJpeAq3tDwmjddCRx0XNwITZPylQB1hlNdKQFtSJ0rweYfivNv1mij/l0v93OK4ddD47rRW+JKgtN2QgQtPw5/qSueXswuSj5nR9pgnxO2yNPYpiFowdtp8u5jTe9wFqRvwuY8PVAewRuOQunhhLgCCsUjcMu0slr3V6N7XtybWWbsdHnFlZi3BocfokUiqLZPJZ0eDm6hHtQC1riAe2LJ+SVMBubtte4sVjvBqXSP27mMLMOccHspqesfG0t3EACwuFC6GzA2w+6NobIDYbiPostJjO0maLa4jzSEWB6cFS++tcw2GeQsiV4vbmyUSbSbZPRZ+NDPmpG7HJuaDflO9q0kt4IHJWPHM7FzjsntluCQbE8pfxjlv4LwrQCW2tzlV310nAP/arucbEg4uo7gkk4PHHC3OaFXtTNCGtuLP5uEmpVzKTT5qp35I4y4/ILMJc07SeuVz3j/VDFQQ0MZ803mf6NH3P9kyMu0ifTdqWjg6iR00z5X5dI4uPxJuokpKRXHmAhCEAWaGoNNO198dV3mnVIfE0g4K86W54f1X3aRsMzv2fQnoh/QHfxuDm5F1OACLH+iq0pbIAWOBBzyrrLDPXqp7nhXnaYwxubbonjc0gd0/4pjm7jzkJLZTK/RSS434AUV+dubp8ce4ZcVZhiYzIasOkhqh0VBEC3jhL7IXt06equStFiGEA9lAG7SMgldVdOVHGMDHXG1pxykaCb88qVkrmucy44+ia+RrRZaSMPiAMPxAzZJ7MtfcE35OeFNTx77u9E2YNja4ucAO9+i0pbfgXVrhTqZYoI3TTP2sY0ucT0C8x1vUH6nqMtS64B8rG/wtHA/wDd1p+Kte/xGX3alcfdGHn+Yft2XOqmJ9qI9L9zApEpSLYoEIQgAShIhAHQaF4hkoSI6jzxcA9Qu2o9RjqmhzC2xHdeVBW6HUJ6N4MbiW/wkoa6dT4erGSwyR8k5r9w+S5HT/EkUm0SEtd2K6SgroJ7eYWSayZRG3C6wlqUueSLXyrlNCyRgIkaPQLVp6elaQS1rz1vlLeQ3+Q/wwGMllJDWlzutgnRwSuJDWPLvQFdZE6lY47I2N9VaFfTsGXMBHRc9vPwHr/pycOj11QNjIdtv3nmwVtnhqq2gyGNo6gG63KjxBSU7C972Cw53AWXFa/+J1DShzaEGqm6BjvID8fsuzFv8FvRGxU0EOn075q2oZFCwXc4m2PivK/F/icalIaXTtzKMHLnYdL9h6LM1/xHqWvS7q6oPsgbthbho+XUrHVEykT1TpgTdCELRkCkQhAAhCEACEIQAJUiVAAp4KyopzeKZ7fmoEIOm3T+KdTgAAluPorzPG+otHF/1LlkIA6p3jjUSLBtv1lUqjxXqs3EoZ6jJWFdCA6Wamuqqs3qaiWX0c42Ve6RCABCEIAEISIOAhCEAf/Z" style="width:85.8895px;height:85.8895px" onclick="desc(4)" draggable="false" class="responsiveImg planet">
+        <img src="data:image/jpeg;base64,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" style="width:85.8895px;height:85.8895px" onclick="desc(4)" draggable="false" class="responsiveImg planet" id="mars">
         <h3 id="4" class="descText">
             <strong style="color:lightyellow">✦</strong> Mass: 6.4171×10^23 kg (0.107 Earths)<br>
             <strong style="color:lightyellow">✦</strong> Diameter: 6779 ± 4.0 km<br>
@@ -316,7 +315,7 @@
         <br>
         <br>
         <br>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Jupiter_and_its_shrunken_Great_Red_Spot.jpg" style="width:600px;height:600px" onclick="desc(5)" draggable="false" class="responsiveImg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Jupiter_and_its_shrunken_Great_Red_Spot.jpg" style="width:600px;height:600px" onclick="desc(5)" draggable="false" class="responsiveImg" id="Jupiter">
         <h3 id="5" class="descText">
             <strong style="color:lightyellow">✦</strong> Mass: 1.8982×10^27 kg (317.8 Earths)<br>
             <strong style="color:lightyellow">✦</strong> Diameter: 139,833 km<br>
@@ -373,7 +372,7 @@
         <br>
         <br>
         <img src="https://solarsystem.nasa.gov/system/stellar_items/image_files/38_saturn_1600x900.jpg" style="width:800px;height:450px" onclick="desc(6)" draggable="false" class="responsiveImg">
-        <h3 id="6" class="descText">
+        <h3 id="6" class="descText" id="saturn">
             <strong style="color:lightyellow">✦</strong> Mass: 	5.6834×10^26 kg (95.159 Earths)<br>
             <strong style="color:lightyellow">✦</strong> Diameter: 116,504 km<br>
             <strong style="color:lightyellow">✦</strong> Temperature: 134 K<br>
@@ -381,18 +380,372 @@
             Saturn is the sixth planet from the Sun and the second-largest in the Solar System, after Jupiter. It is a gas giant with an average radius of about nine and a half times that of Earth. Saturn is a gas giant composed predominantly of hydrogen and helium. It lacks a solid surface, though it is likely to have a solid core. Saturn is the only planet of the Solar System that is less dense than water—about 30% less. So if you have a pool that is large enough to fit in Saturn, it is possible to float on it!<br>
             Saturn is probably best known for the system of planetary rings that makes it visually unique. The rings extend from 6,630 to 120,700 kilometers outward from Saturn's equator and average approximately 20 meters (66 ft) in thickness. They are composed predominantly of water ice, with trace amounts of tholin impurities and a peppered coating of approximately 7% amorphous carbon. The particles that make up the rings range in size from specks of dust up to 10 m. While the other gas giants also have ring systems, Saturn's is the largest and most visible.
         </h3>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Uranus_as_seen_by_NASA%27s_Voyager_2_%28remastered%29_-_JPEG_converted.jpg/1024px-Uranus_as_seen_by_NASA%27s_Voyager_2_%28remastered%29_-_JPEG_converted.jpg" style="width:225px;height:225px" onclick="desc(7)" draggable="false" class="responsiveImg">
+        <h3 id="7" class="descText" id="uranus">
+            <strong style="color:lightyellow">✦</strong> Mass: (8.6810±0.0013)×10^25 kg (14.536 Earths)<br>
+            <strong style="color:lightyellow">✦</strong> Diameter: 50,724 ± 14 km<br>
+            <strong style="color:lightyellow">✦</strong> Temperature: 76 K<br>
+            <strong style="color:lightyellow">✦</strong> Satellites:  Titania, Oberon and 25 More<br>
+            Uranus is the seventh planet from the Sun. Its name is a reference to the Greek god of the sky. Uranus's atmosphere is similar to Jupiter's and Saturn's in its primary composition of hydrogen and helium, but it contains more "ices" such as water, ammonia, and methane, along with traces of other hydrocarbons. Uranus orbits the Sun once every 84 years, taking an average of seven years to pass through each of the dozen constellations of the zodiac. Wind speed is extremely fast on Uranus, reaching 250 metres per second (900 km/h). In comparison, the highest natural surface wind velocity ever officially recorded by means of an anemometer, anywhere in the world is 103.266 metres per second (371.758 km/h).
+        </h3>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="https://solarsystem.nasa.gov/system/feature_items/images/82_carousel_neptune_1.jpg" style="width:218.43506032647267565649396735273243435060326472675656493967352732434350603264726756564939673527324343506032647267565649396735273243435060326472675656493967352732434350603264726756564939673527324343506px;height:218.43506032647267565649396735273243435060326472675656493967352732434350603264726756564939673527324343506032647267565649396735273243435060326472675656493967352732434350603264726756564939673527324343506px" onclick="desc(8)" draggable="false" class="responsiveImg">
+        <h3 id="8" class="descText" id="neptune">
+            <strong style="color:lightyellow">✦</strong> Mass: 1.02413×10^26 kg (17.147 Earths)<br>
+            <strong style="color:lightyellow">✦</strong> Diameter: 49,244 ± 38 km<br>
+            <strong style="color:lightyellow">✦</strong> Temperature: 72 K<br>
+            <strong style="color:lightyellow">✦</strong> Satellites:  Triton, Nereid, Neso and 11 More<br>
+            Dark, cold, and whipped by supersonic winds, ice giant Neptune is the eighth and most distant planet in our solar system. Neptune is the only planet in our solar system not visible to the naked eye and the first predicted by mathematics before its discovery. Most of Neptune mass is a hot, dense fluid of "icy" materials – water, methane(which is in part account for the planet's blue appearance) and ammonia – above a small rocky core. Neptune's weather is characterised by extremely dynamic storm systems, with winds reaching speeds of almost 600 m/s (2,200 km/h; 1,300 mph)—nearly reaching supersonic flow.
+        </h3>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScq1PfCeDsfR65X8AazTLGDvw3lbh6gdTF9CWHNOXeipLLWb4OF_clOYfxSNcpvnkxITI&usqp=CAU" style="width:25px;height:25px" onclick="desc(9)" draggable="false" class="responsiveImg">
+        <h3 id="9" class="descText" id="pluto">
+            <strong style="color:lavenderblush">✦</strong> The End of the Solar System<br>
+            Pluto was considered to be in the Solar System when it was discovered. However, sooner scientists realized it was a dwarf planet instead, thus excluding it from the Solar System in 2006. Pluto is located in The Kuiper Belt. It is a great ring of debris similar to the asteroid belt, but consisting mainly of objects composed primarily of ice. It extends between 30 and 50 AU (4.5 and 7.5 billion km; 2.8 and 4.6 billion mi) from the Sun. It is composed mainly of small Solar System bodies, although the largest few are probably large enough to be dwarf planets. Details outside the Solar System is less known, since only 5 artifical objects, in which 3 of them are still working left the Solar System. Maybe it is <i>you</i> to unveil more secrets laid beyond The Kuiper Belt!<br>
+            Also on a side note, due to the orientation and tilt of their orbits, the eight major planets of the Solar System can never come into perfect alignment(which is shown in this website). The last time they appeared even in the same part of the sky was over 1,000 years ago, in the year AD 949, and they won’t manage it again until 6 May 2492.
+        </h3>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Voyager_spacecraft_model.png/1280px-Voyager_spacecraft_model.png" style="width:20px;height:20px;margin-right: 400px"  draggable="false" class="responsiveImg" title="Voyager 2">
     </div>
     <!--FOOTER-->
     <div class="bottomBG" style="padding:5px;">
         <h3 style="color:azure">Resources (Order is <i>not</i> based on any order):</h3>
         <h5>
-            <a href="https://en.wikipedia.org/wiki/">Wikipedia, the free encyclopedia</a><br>
-            <a href="https://education.nationalgeographic.org/resource/">National Geographic Resource</a><br>
-            <a href="https://www.universetoday.com/36676/satellites-of-venus/">Universe Today</a><br>
+            <a href="https://en.wikipedia.org/wiki/">Wikipedia, the free encyclopedia on <b>Solar System</b>.</a><br>
+            <a href="https://solarsystem.nasa.gov/planets/overview/">NASA on <b>Solar System</b>.</a><br>
+            <a href="https://education.nationalgeographic.org/resource/">National Geographic Resource on <b>Inner Solar System</b>.</a><br>
+            <a href="https://www.universetoday.com/36676/satellites-of-venus/">Universe Today on <b>possibility of satellites of Venus</b>.</a><br>
+            <a href="https://www.mountwashington.org/about-us/history/world-record-wind.aspx#:~:text=Then%2C%20at%201%3A21%20pm,anemometer%2C%20anywhere%20in%20the%20world.">Mount Washington on <b>world record wind speed</b>.</a><br>
+            <a href="https://www.sciencefocus.com/news/planetary-alignment-2022/">Science Focus on <b>planetary alignment</b>.</a>
         </h5>
         <h4>Disclaimer:</h4>
         <h5>
-            Size(notably large planets and stars), distance, rotation are not accurately measured and displayed, but had an attempt to make it as close to accurate as possible. This is not a suitable material for formal subject teaching, but rather a more visual way for everyone to understand the solar system in which we are living in. Temperature refers to the surface (or temperature at 1 Bar if surface temperature is not provided). Descriptions are mainly copied from resources due to the lack of free time of the author.
+            Size(notably large planets and stars), distance, rotation are not accurately measured and displayed, but had an attempt to make it as close to accurate as possible. This is not a suitable material for formal subject teaching, but rather a more visual way for everyone to understand the solar system in which we are living in. Temperature refers to the surface (or temperature at 1 Bar if surface temperature is not provided). Asteriod Belt and satellites are not shown.
             <br><br>
             Website created by <b>Integrated Science Club committee.</b><br>
             Should you have any enquiries, feel free to contact any of our committee members, or sending an email to <a href="mailto:sy10236@syss.edu.hk?subject=Enquires%20Regarding%20%22Lunar%3A%20Explore%20The%20Solar%20System%22&body=Hello%20I%20have%20enquires%20on%20your%20website%20%22Lunar%3A%20Explore%20The%20Solar%20System%22%20(Referred%20as%20%22this%20website%22%2C%20%22your%20website%22%2C%20%22website%22%20unless%20specified%22)%3A">sy10236@syss.edu.hk</a><br>
