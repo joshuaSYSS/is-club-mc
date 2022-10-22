@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lunar: Explore The Solar System</title>
+    <link type="text/css" rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/L6mkY4V/Photo-from-no-reply-1-removebg-preview.png">
+    <link href='https://fonts.googleapis.com/css?family=IM Fell English SC' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="alternate" hreflang="en" href="https://joshuasyss.github.io/is-club-mc.github.io"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A portal to access various games and useful websites related to integrated science."/>
+    <meta name="google-site-verification" content="_lMnBBBWskKou0BtLNYz-dReGEjIcHFir_dyzlUXNcA" />
+    <meta name="author" content="SYSS Integrated Science Club"/>
+    <meta name="keywords" content="science, integrated science, club, sing yin secondary school, syss, https://joshuasyss.github.io/is-club-mc.github.io/ , 聖言中學, astronomy, space"/>
+    <meta property="og:site_name" content="Lunar: Explore The Solar System"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://joshuasyss.github.io/is-club-mc.github.io"/>
+    <meta property="og:title" content="Lunar: Explore The Solar System"/>
+    <meta property="og:description" content=""/>
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="MobileOptimized" content="width">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'IM Fell English SC', 'Kanit', Arial, Helvetica, sans-serif;
+            background-size: cover; 
+            background-position: center center; 
+            text-align:center;
+            height:100%;
+            background-color: black;
+            color: ghostwhite;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+            
+        }
+        ::selection {
+            background: lightgreen;
+            color: orangered;
+        }
+        html {
+            scroll-behavior: smooth;
+            height:100%;
+        }
+        main {
+            margin-top: 30px;
+        }
+        .topnav {
+            overflow: hidden;
+            background-color: ghostwhite;
+            text-align: left;
+            position:fixed;
+            width:100%;
+            border-bottom: 3px solid darkblue;
+        }
+        .topnav a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+        .bottomBG{
+            width:100%;
+            height:auto;
+            text-align: left;
+            bottom: 0;
+            position:relative;
+            color: aliceblue;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .responsiveImg{
+            max-width:100%;
+            max-height:100%;
+            object-fit: cover;
+        }
+        .collapsible{
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+        .active, .collapsible:hover {
+            background-color: #9966ff;
+        }
+        .fa {
+            padding: 10px;
+            font-size: 30px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50%;
+        }
+        .fa-google {
+            background: black;
+            color: white;
+        }
+        .fa-instagram {
+            background: black;
+            color: white;
+        }
+        .column {
+            float: center;
+            width: 40%;
+            padding: 0 16px;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.12),  0 8px 8px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12);
+            margin: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius:5%;
+        }
+        .column:hover{
+            border: 4px solid black;
+        }
+        .descText{
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        a:active{
+            color:aliceblue;
+        }
+        a:visited{
+            color:aliceblue;
+        }
+        a:hover{
+            color:cornsilk;
+        }
+        a:default{
+            color:aliceblue;
+        }
+        a:any-link{
+            color:aliceblue;
+        }
+        .planet{
+            animation-name: example;
+            animation-duration: 86400s;
+            
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: black;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: grey;
+            max-width:100%;
+            max-height:100%;
+            border-radius:10%;
+        }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+        <!--https://i.ibb.co/Bf4Fzvb/istockphoto-876037616-170667a-removebg-preview.png-->
+        @keyframes example {
+            from {transform: rotate(0deg);}
+            to {transform: rotate(360deg);}
+        }
+        @media screen and (max-width: 1000px) {
+            .topnav a {
+                float: none;
+                display: block;
+            }
+            .headerDiv{
+                height:50%;
+            }
+        }
+        @media screen and (max-width: 650px) {
+            .column {
+                width: 100%;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--INIT-->
+    <script>
+        function desc(id){
+            for(let i = 0;i < 7;i++){
+                var c = document.getElementById(i.toString());
+                if(i != id){
+                    c.style.maxHeight = null;
+                }
+                else{
+                    if(c.style.maxHeight == c.scrollHeight + "px") c.style.maxHeight = null;
+                    else c.style.maxHeight = c.scrollHeight + "px";
+                }
+            }
+            
+            return;
+        }
+    </script>
+    <!--END OF INIT-->
+    <div style="height:100%;padding-top:450px">
+        <h1>Lunar: Explore The Solar System</h1>
+        <h3><a href="#sun">Click on respective planet to view details.</a></h3>
+    </div>
+    <div>
+        <!--0.1 AU = 1 <br> rounded down-->
+        <img src="https://i.natgeofe.com/n/2f169ccb-e943-4772-8bd1-c92e79db64ab/gsfc_20171208_archive_e000922_orig_square.jpg" style="width:2133.33px;height:2133.33px;margin:auto" draggable="false" onclick="desc(0)" class="responsiveImg" id="sun">
+        <h3 id="0" class="descText">
+            <strong style="color:lightyellow">✦</strong> Mass: 1.99×10^30 kg (332,950 Earths)<br>
+            <strong style="color:lightyellow">✦</strong> Diameter: 1,392,684 km<br>
+            <strong style="color:lightyellow">✦</strong> Temperature: 5,772 K<br>
+            <strong style="color:lightyellow">✦</strong> Age: ≈4.6 billion years<br>
+            The Sun is the Solar System's star and by far its most massive component. Its large mass (around 332,900 Earth's masses), which comprises 99.86% of all the mass in the Solar System, produces temperatures and densities in its core high enough to sustain nuclear fusion of hydrogen into helium. This releases an enormous amount of energy, mostly radiated into space as electromagnetic radiation peaking in visible light. Therefore it is able to light up the Earth during the morning. It is an ordinary star, one of about 100 billion in our galaxy, the Milky Way. The sun has extremely important influences on our planet: It drives weather, ocean currents, seasons, and climate, and makes plant life possible through photosynthesis.
+        </h3>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="https://i.natgeofe.com/n/c6f7cee9-cde6-44a2-a686-9a80f5bfc1e8/01_mercury_pia15190_orig.jpg" style="width:70px;height:70px" onclick="desc(1)" draggable="false" class="responsiveImg planet" >
+        <h3 id="1" class="descText">
+            <strong style="color:lightyellow">✦</strong> Mass: 3.3×10^23 kg (0.055 Earths)<br>
+            <strong style="color:lightyellow">✦</strong> Diameter: 4880 km<br>
+            <strong style="color:lightyellow">✦</strong> Temperature: 737 K<br>
+            <strong style="color:lightyellow">✦</strong> Satellites: None<br>
+            Mercury is named after the messenger of the Roman gods because of its fleeting nature across the sky. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun's planets. Like Venus, Mercury orbits the Sun within Earth's orbit as an inferior planet, and its apparent distance from the Sun as viewed from Earth never exceeds 28°. Mercury rotates in a way that is unique in the Solar System. It is tidally locked with the Sun in a 3:2 spin–orbit resonance, meaning that relative to the fixed stars, it rotates on its axis exactly three times for every two revolutions it makes around the Sun.
+        </h3>
+        <br>
+        <br>
+        <br>
+        <img src="https://cdn.mos.cms.futurecdn.net/RifjtkFLBEFgzkZqWEh69P.jpg" style="width:260px;height:140px" onclick="desc(2)" draggable="false" class="responsiveImg planet">
+        <h3 id="2" class="descText">
+            <strong style="color:lightyellow">✦</strong> Mass: 4.8675×10^24 kg (0.815 Earths)<br>
+            <strong style="color:lightyellow">✦</strong> Diameter: 12,103.6 ± 2.0 km<br>
+            <strong style="color:lightyellow">✦</strong> Temperature: 100 to 700 K<br>
+            <strong style="color:lightyellow">✦</strong> Satellites: None<br>
+            Venus is the second planet from the Sun. It is sometimes called Earth's "sister" or "twin" planet as it is almost as large and has a similar composition. As an interior planet to Earth Venus, like Mercury, appears in Earth's sky never far from the Sun, either as morning star or evening star with a synodic period of 1.6 years. It is, after the Moon, the brightest natural object in Earth's sky, capable of casting visible shadows on Earth at dark conditions and being visible to the naked eye in broad sunlight. Although there doesn't exist any satellites orbitting it in the present, some evidences suggested that there might have existed satellites in the past. Conditions on the Venusian surface differ radically from those on Earth because its dense atmosphere is 96.5% carbon dioxide, with most of the remaining 3.5% being nitrogen.
+        </h3>
+        <br>
+        <br>
+        <br>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/The_Blue_Marble_%28remastered%29.jpg/1024px-The_Blue_Marble_%28remastered%29.jpg" style="width:171.779px;height:171.779px" onclick="desc(3)" draggable="false" title="The Blue Marble" class="responsiveImg planet">
+        <h3 id="3" class="descText">
+            <strong style="color:lightyellow">✦</strong> Mass: 5.97217×10^24 kg (1 Earth)<br>
+            <strong style="color:lightyellow">✦</strong> Diameter: 12,742 km<br>
+            <strong style="color:lightyellow">✦</strong> Temperature: 248 to 320 K<br>
+            <strong style="color:lightyellow">✦</strong> Satellite: Moon<br>
+            Earth is the third planet from the Sun and the only known place in the universe to support life.. While large volumes of water can be found throughout the Solar System, only Earth sustains liquid surface water. About 71% of Earth's surface is made up of the ocean, dwarfing Earth's polar ice, lakes, and rivers. The remaining 29% of Earth's surface is land, consisting of continents and islands. Earth's surface layer is formed of several slowly moving tectonic plates, interacting to produce mountain ranges, volcanoes, and earthquakes. Humans depend on Earth's biosphere and natural resources for their survival, but have increasingly impacted Earth's environment. Today, humanity's impact on Earth's climate, soils, waters, and ecosystems is unsustainable, threatening people's lives and causing widespread extinction of other life. The research on this environmental protection leads to another subject of integrated science.
+        </h3>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="data:image/jpeg;base64,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" style="width:85.8895px;height:85.8895px" onclick="desc(4)" draggable="false" class="responsiveImg planet">
+        <h3 id="4" class="descText">
+            <strong style="color:lightyellow">✦</strong> Mass: 6.4171×10^23 kg (0.107 Earths)<br>
+            <strong style="color:lightyellow">✦</strong> Diameter: 6779 ± 4.0 km<br>
+            <strong style="color:lightyellow">✦</strong> Temperature: 163 to 308 K<br>
+            <strong style="color:lightyellow">✦</strong> Satellites: Phobos, Deimos<br>
+            Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury. Mars is a terrestrial planet with a thin atmosphere (less than 1% that of Earth's), and has a crust primarily composed of elements similar to Earth's crust, as well as a core made of iron and nickel. Mars has surface features such as impact craters, valleys, dunes, and polar ice caps. The red-orange appearance of the Martian surface is caused by iron(III) oxide, or rust. Of all the planets in the Solar System, the seasons of Mars are the most Earth-like, due to the similar tilts of the two planets' rotational axes.  It was widely accepted in the astronomical community that Mars had life-supporting qualities, including the presence of oxygen and water.
+        </h3>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Jupiter_and_its_shrunken_Great_Red_Spot.jpg" style="width:600px;height:600px" onclick="desc(5)" draggable="false" class="responsiveImg">
+        <h3 id="5" class="descText">
+            <strong style="color:lightyellow">✦</strong> Mass: 1.8982×10^27 kg (317.8 Earths)<br>
+            <strong style="color:lightyellow">✦</strong> Diameter: 139,833 km<br>
+            <strong style="color:lightyellow">✦</strong> Temperature: 165 K<br>
+            <strong style="color:lightyellow">✦</strong> Satellites:  Io, Europa, Ganymede, Callisto and 76 More<br>
+            Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, but slightly less than one-thousandth the mass of the Sun. Jupiter is the third brightest natural object in the Earth's night sky after the Moon and Venus, and it has been observed since prehistoric times. It was named after the Roman god Jupiter, the king of the gods. The huge mass and the elements that composed of it aroused scientist's interested in this massive planet. Jupiter is a gas giant, being primarily composed of gas and liquid rather than solid matter. The average density of Jupiter, 1.326 g/cm^3, is about the same as syrup.
+        </h3>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="https://solarsystem.nasa.gov/system/stellar_items/image_files/38_saturn_1600x900.jpg" style="width:800px;height:450px" onclick="desc(6)" draggable="false" class="responsiveImg">
+        <h3 id="6" class="descText">
+            <strong style="color:lightyellow">✦</strong> Mass: 	5.6834×10^26 kg (95.159 Earths)<br>
+            <strong style="color:lightyellow">✦</strong> Diameter: 116,504 km<br>
+            <strong style="color:lightyellow">✦</strong> Temperature: 134 K<br>
+            <strong style="color:lightyellow">✦</strong> Satellites:  Titan, Enceladus, Iapetus and 80 More(Along with a finite but innumerable additional moonlets)<br>
+            Saturn is the sixth planet from the Sun and the second-largest in the Solar System, after Jupiter. It is a gas giant with an average radius of about nine and a half times that of Earth. Saturn is a gas giant composed predominantly of hydrogen and helium. It lacks a solid surface, though it is likely to have a solid core. Saturn is the only planet of the Solar System that is less dense than water—about 30% less. So if you have a pool that is large enough to fit in Saturn, it is possible to float on it!<br>
+            Saturn is probably best known for the system of planetary rings that makes it visually unique. The rings extend from 6,630 to 120,700 kilometers outward from Saturn's equator and average approximately 20 meters (66 ft) in thickness. They are composed predominantly of water ice, with trace amounts of tholin impurities and a peppered coating of approximately 7% amorphous carbon. The particles that make up the rings range in size from specks of dust up to 10 m. While the other gas giants also have ring systems, Saturn's is the largest and most visible.
+        </h3>
+    </div>
+    <!--FOOTER-->
+    <div class="bottomBG" style="padding:5px;">
+        <h3 style="color:azure">Resources (Order is <i>not</i> based on any order):</h3>
+        <h5>
+            <a href="https://en.wikipedia.org/wiki/">Wikipedia, the free encyclopedia</a><br>
+            <a href="https://education.nationalgeographic.org/resource/">National Geographic Resource</a><br>
+            <a href="https://www.universetoday.com/36676/satellites-of-venus/">Universe Today</a><br>
+        </h5>
+        <h4>Disclaimer:</h4>
+        <h5>
+            Size(notably large planets and stars), distance, rotation are not accurately measured and displayed, but had an attempt to make it as close to accurate as possible. This is not a suitable material for formal subject teaching, but rather a more visual way for everyone to understand the solar system in which we are living in. Temperature refers to the surface (or temperature at 1 Bar if surface temperature is not provided). Descriptions are mainly copied from resources due to the lack of free time of the author.
+            <br><br>
+            Website created by <b>Integrated Science Club committee.</b><br>
+            Should you have any enquiries, feel free to contact any of our committee members, or sending an email to <a href="mailto:sy10236@syss.edu.hk?subject=Enquires%20Regarding%20%22Lunar%3A%20Explore%20The%20Solar%20System%22&body=Hello%20I%20have%20enquires%20on%20your%20website%20%22Lunar%3A%20Explore%20The%20Solar%20System%22%20(Referred%20as%20%22this%20website%22%2C%20%22your%20website%22%2C%20%22website%22%20unless%20specified%22)%3A">sy10236@syss.edu.hk</a><br>
+            <i>2022-23 Integrated Science Club</i>
+        </h5>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"/></a><br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">Creative Commons Attribution-ShareAlike 4.0 International License</a>.<br>
+        <a href="https://sites.google.com/syss.edu.hk/integrated-science-club/home" target="_blank" rel="noopener noreferrer" class="fa fa-google"></a>        
+        <a href="https://www.instagram.com/syss_is_club/" target="_blank" rel="noopener noreferrer" class="fa fa-instagram"></a><br>
+    </div>
+    <!--END OF FOOTER-->
+</body>
+</html>
