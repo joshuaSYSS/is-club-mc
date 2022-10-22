@@ -179,7 +179,10 @@
             else{
                 document.getElementById("addbr").innerHTML = "<p id=\"addbr\"></p>";
             }
-            if(w <= 1000){
+            if(w <= 600){
+            document.getElementById("headerDiv").style.height = "100%";
+            }
+            else if(w <= 1000){
                 document.getElementById("headerDiv").style.height = "50%";
             }
             else{
