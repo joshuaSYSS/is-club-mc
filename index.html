@@ -12,7 +12,7 @@
     <meta name="description" content="A portal to access various games and useful websites related to integrated science."/>
     <meta name="google-site-verification" content="_lMnBBBWskKou0BtLNYz-dReGEjIcHFir_dyzlUXNcA" />
     <meta name="author" content="SYSS Integrated Science Club"/>
-    <meta name="keywords" content="syss, 聖言中學, 中學, sing yin secondary school, school, sing yin, science, integrated science, chemistry, physics, biology, games, multiple choice question, mcq, quiz, flame test, turing machine, reaction, reaction time, test, reaction time test, virus defender"/>
+    <meta name="keywords" content="syss, 聖言中學, 中學, sing yin secondary school, secondary school, school, sing yin, science, integrated science, chemistry, physics, biology, games, multiple choice question, mcq, quiz, flame test, turing machine, reaction, reaction time, test, reaction time test, virus defender, space, sun, mercury, venus, earth, mars, jupiter, saturn, uranus, neptune, pluto, simulator, fun, education, games"/>
     <meta property="og:site_name" content="IS CLUB MC: Collection of Science Websites"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://joshuasyss.github.io/is-club-mc.github.io"/>
@@ -155,7 +155,7 @@
         }
     </style>
 </head>
-<body onresize="resized()" onscroll="scrollChange()">
+<body onresize="resized()" onscroll="scrollChange()" onload="sendAPI()">
     <!--INIT-->
     <div class="topnav">
         <a href="https://sites.google.com/syss.edu.hk/integrated-science-club/home"><img src="https://i.ibb.co/L6mkY4V/Photo-from-no-reply-1-removebg-preview.png" style="width:40px;height:40px;"/></a>
@@ -192,6 +192,16 @@
             var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             var scrolled = (winScroll / height) * 100;
             document.getElementById("topInd").style.width = scrolled + "%";
+        }
+        function sendAPI(){
+            const Http = new XMLHttpRequest();
+            const url='https://joshuasyss.github.io/is-club-mc.github.io/';
+            Http.open("GET", url);
+            Http.send();
+
+            Http.onreadystatechange = (e) => {
+                console.log(Http.responseText)
+            }
         }
     </script>
     </div>
@@ -329,11 +339,10 @@
         
     <!--FOOTER-->
     <div class="bottomBG" style="border-top:3px solid rebeccapurple;padding:10px;margin-bottom:50px">
-        <br>
         <h5 style="color:black;">
             <br>
             Website created by <b>Integrated Science Club committee.</b><br>
-            Should you have any enquiries, feel free to contact any of our committee members, or sending an email to <a href="mailto:sy10236@syss.edu.hk?subject=Enquires%20on%20%22Integrated%20Science%20Club%20Multimedia%20Collection%22&body=Hello%20I%20have%20enquires%20on%20%22Integrated%20Science%20Club%20Multimedia%20Collection%22%20(referred%20as%20%22your%20website%22%2C%20%22this%20website%22%20unless%20specified)%20">sy10236@syss.edu.hk</a><br>
+            Should you have any enquiries, feel free to contact any of our committee members, or sending an email to sy10236@syss.edu.hk<br>
             <code>2022-23 Integrated Science Club</code>
         </h5>
         <code><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"/></a><br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</code><br>
