@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Virus Defender</title>
+    <title>Virus Defender: Learn About Immune System Effectively!</title>
     <link type="text/css" rel="stylesheet" href="/main.css">
-    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/L6mkY4V/Photo-from-no-reply-1-removebg-preview.png">
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/Sd1XH8D/virus-Defender-Icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Syne+Mono' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="MobileOptimized" content="width">
 <style>
 body {
     margin: 0;
-    font-family: 'Acme', Arial, Helvetica, sans-serif;
-    /*background-color: #ffffff;*/
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(https://lh3.googleusercontent.com/SuoGEEbnTSozlrJq-_AK-jdV3YgTsgY55KJebLDwLxonKUEQ17yEVK2lXeSeMeZ_VPOkag=w16383);
+    font-family: 'Syne Mono', Arial, Helvetica, sans-serif;
+        background-color: lightgray;
     background-size: cover; background-position: center center; 
     text-align:center;
     height:100%;
@@ -66,8 +67,9 @@ html {
     }
     .bottomBG{
         background-color:#e6e6ff;
-        width:100%;
-        height:auto;
+            width:100%;
+            height:auto;
+            text-align: left;
     }
     .navbar {
         background-color: #333;
@@ -113,12 +115,6 @@ html {
         transition: max-height 0.2s ease-out;
         background-color: #47476b;
     }
-    .flameOpacity{
-        transition: opacity 2s;
-    }
-    .setOpacity{
-        opacity:1;
-    }
     #myBtn {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
@@ -139,127 +135,159 @@ html {
   background-color: #555; /* Add a dark-grey background on hover */
     }
     .fa {
-  padding: 10px;
-  font-size: 30px;
-  width: 30px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
-}
-    .fa-google {
-  background: #dd4b39;
-  color: white;
-}
-    .fa-instagram {
-  background: #125688;
-  color: white;
-}
+            padding: 10px;
+            font-size: 30px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50%;
+        }
+        .fa-google {
+            background: #dd4b39;
+            color: white;
+        }
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }
     .bg {
-  /* The image used */
-  background-image: url("https://i.ibb.co/jG9FLn9/2022-10-15.png");
-
-  /* Full height */
-  height: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-
+        height: 75%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top:300px
+    }
+    .rightPhoto{
+        float:right;
+        margin-right:400px;
+        width: 200px;
+        height: auto;
+        border-radius: 5%;
+    }
+    .leftPhoto{
+        float:left;
+        margin-left:400px;
+        width: 200px;
+        height: auto;
+        border-radius: 5%;
+    }
+    a:hover{
+        color: yellowgreen;
+    }
     @media screen and (max-width: 1000px) {
         .topnav a {
             float: none;
             display: block;
         }
+        .bg{
+            height: 100%;
+        }
+        .rightPhoto{
+            margin-right:200px;
+        }
+        .leftPhoto{
+            margin-left:200px;
+        }
     }
+    @media screen and (max-width: 750px) {
+        .rightPhoto{
+            margin-right:100px;
+        }
+        .leftPhoto{
+            margin-left:100px;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        .rightPhoto{
+            margin-right:50px;
+        }
+        .leftPhoto{
+            margin-left:50px;
+        }
+    }
+    ::selection {
+            background: lightgreen;
+            color: orangered;
+        }
+    ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background-color: cadetblue;
+            box-shadow: inset 0 0 3px grey;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: black;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body onresize="resized()" onscroll="scrollFunction()">
     <!--INIT-->
     <div class="topnav">
-        <a href="https://joshuachoi.itch.io/virus-defender" style="color:white;float:right"><code><b>Download!</b></code></a>
+        <a href="https://joshuachoi.itch.io/virus-defender" style="color:white;float:right;height:100%"><h3>Download!</h3></a>
         <a href="https://sites.google.com/syss.edu.hk/integrated-science-club/home"><img src="https://i.ibb.co/L6mkY4V/Photo-from-no-reply-1-removebg-preview.png" style="width:40px;height:40px;"/></a>
-        <code><h1 style="color:white"><strong>2022 - 2023 Integrated Science Club</strong></h1></code>
+        <h1 style="color:white"><strong>2022 - 2023 Integrated Science Club</strong></h1>
     </div>
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     <!--END OF INIT-->
     
-    <div class="bg">
-        <br><br><br><br><br><br><br><br>
+    <div class="bg" draggable=false>
         <p id="addbr"></p>
-        <h1 style="color:whitesmoke"><big><header><strong>Virus Defender</strong></header></big></h1>
-        <h3 style="color:#b3b3ff">Immune System Simulation!</h3>
-        <h3 style="color:#b3b3ff">We Integrated Science Club collaborated with <a href="https://sites.google.com/syss.edu.hk/biology-club" target="_blank" rel="noopener noreferrer">Biology Club</a> to create this fun immune system simulation.</h3>
+        <big><header style="font-size:100px;"><strong style="color:darkred;">Virus</strong> <strong style="color:darkblue">Defender</strong></header></big>
+        <h3 style="color:indigo;margin-bottom:100px">The <u>Modernistic</u> to Learn About Immune System.</h3>
         <form action="https://joshuachoi.itch.io/virus-defender">
-        <button style="background-color: crimson;color:gold;height: 200px;
-            width: 300px;
-            border: 5px solid black;
-                       border-radius:50%"><h2>Download</h2></button>
+            <button style="background-color: mediumblue;color:ghostwhite;height:50px;width:200px;border-radius:5%;text-align: center;box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.12),  0 8px 8px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12);"><h4>Download</h4>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Unofficial_Windows_logo_variant_-_2002%E2%80%932012_%28Multicolored%29.svg/1161px-Unofficial_Windows_logo_variant_-_2002%E2%80%932012_%28Multicolored%29.svg.png" style="width:40px;height:40px;margin:5px" draggable=false>
+                <img src="https://1000logos.net/wp-content/uploads/2017/03/LINUX-LOGO.png" style="width:40px;height:40px;margin:5px" draggable=false>
+            </button>
         </form>
-        <br><br><br><br><br>
     </div>
-    
-    <br><br>
-    <div style="background-color:#bfbfbf">
-        <h2 style="text-align: center">FAQ:</h2>
-        <button type="button" class="collapsible" style="text-align: center"><strong>How To Play?</strong></button>
-        <div class="content" style="background-color: #1f1f2e;color:whitesmoke">
-            <br>
-            Use <strong>WASD</strong> to control the "immune system" represented by a red block by rotating it up, right, down and left respectively.
-            <br>
-            <img src="https://i.ibb.co/HnRLMtv/block.png" alt="Red Block" title="Red Block">
-            <br>
-            Block the viruses with the "immune system"!
-            <br>
-            <img src="https://i.ibb.co/h7RJRWN/virus1.png" alt="Virus 1" title="Virus 1">
-            <img src="https://i.ibb.co/dmTXJVS/virus2.png" alt="Virus 2" title="Virus 2">
-            <br>
-            Don't let the viruses touch the heart! If the health reaches 0, you lose.
-            <br>
-            <img src="https://i.ibb.co/Sd1XH8D/virus-Defender-Icon.png" alt="Heart" title="Heart">
-            <br>
-            You can heal by touching your heart with the medicine. But beware, you can destroy the medicine with your "immune system"!
-            <br>
-            <img src="https://i.ibb.co/9ZCP8wN/healPil.png" alt="Medicine" title="Medicine">
-            <br>
-        </div>
-        <button type="button" class="collapsible" style="text-align: center"><strong>I cannot download/play the application.</strong></button>
-        <div class="content" style="background-color: #1f1f2e;color:whitesmoke">
-            <br>
-            It is most likely that your device is incompactible with the game. You can send an email to sy10236@syss.edu.hk if you want to know more.
-            <br>
-            <br>
-        </div>
-        <button type="button" class="collapsible" style="text-align: center"><strong>What is the immune system?</strong></button>
-        <div class="content" style="background-color: #1f1f2e;color:whitesmoke">
-            <br>
-            The immune system protects your body from outside invaders, including germs such as bacteria, viruses, and fungi, and toxins (chemicals made by microbes). The immune system is made up of different organs, cells, and proteins that work together.
-            <br>
-            <br>
-        </div>
-        <button type="button" class="collapsible" style="text-align: center"><strong>What are the two immune system that exist?</strong></button>
-        <div class="content" style="background-color: #1f1f2e;color:whitesmoke">
-            <br>
+    <div style="background-color:snow;padding-top:50px">
+        <img src="https://i.ibb.co/Sd1XH8D/virus-Defender-Icon.png" alt="Heart" title="Heart" class="rightPhoto" draggable=false>
+        <h2 style="margin-right:500px">Easy to Learn, Hard to Master.</h2>
+        <h4 style="margin-right:500px;margin-bottom: 200px">
+            Use <strong>WASD</strong> to control the "immune system" represented<br> by a red block by rotating it up, right, down and left respectively.<br>
+            Block the viruses with the "immune system"!<br>
+            Don't let the viruses touch the heart! If the health reaches 0, you lose.<br>
+            You can heal by touching your heart with the medicine. But beware,<br> you can destroy the medicine with your "immune system"!<br>
+            It's easy to learn how exactly to play, but it's hard for you to conquer this game.<br>
+        </h4>
+        <img src="https://www.biointeractive.org/sites/default/files/styles/square_thumbnail/public/media/image/2021-06/The%20immune%20system%20thumbnail.jpg?itok=ZZzwyvKz" alt="Immune System" title="Immune System" class="leftPhoto" draggable=false>
+        <h2 style="margin-right:500px">The Optimal Way to Learn.</h2>
+        <h4 style="margin-right:500px;margin-bottom: 200px">
+            The immune system protects your body from outside invaders, including germs such as bacteria,<br> viruses, and fungi, and toxins (chemicals made by microbes). <br>The immune system is made up of different organs, cells,<br> and proteins that work together.<br>Learn without having to facing boring words here!<br>
+        </h4>
+        <img src="https://my.clevelandclinic.org/-/scassets/images/org/health/articles/21214-coronavirus-covid-19" alt="Virus" title="Virus" class="rightPhoto" draggable=false>
+        <h2 style="margin-right:500px">Learning Immune System with this One of a Kind Way.</h2>
+        <h4 style="margin-right:500px;margin-bottom: 200px">
+            The two type of immune system:<br>
             <ul>
-                <li><b>Innate immune system.</b> This immune system is borned naturally in everyone, althought not the same effectiveness.</li>
-                <li><b>Adaptive immune system.</b> You develop this when your body is exposed to microbes or chemicals released by microbes. In other words, this occurs most likely when you are infected with a specific infectious disease, and you develop this adaptive immune system against it. Therefore, your body can easily defend it next time when you get infected again.</li>
+                <li><b>Innate immune system.</b> This immune system is borned naturally<br> in everyone, althought not the same effectiveness.</li>
+                <li><b>Adaptive immune system.</b> You develop this when your body is<br> exposed to microbes or chemicals released by microbes. In other words, this occurs most likely<br> when you are infected with a specific infectious disease,<br> and you develop this adaptive immune system against it.<br> Therefore, your body can easily defend it next time when you get infected again.</li>
             </ul>
-            <br>
-        </div>
-        <button type="button" class="collapsible" style="text-align: center"><strong>What is the difference between bacteria and virus?</strong></button>
-        <div class="content" style="background-color: #1f1f2e;color:whitesmoke">
-            <br>
-            Viruses are an assembly of different types of molecules that consist of genetic material (either a single- or double-stranded DNA or RNA) with a protein coat and sometimes a layer of fat too (an envelope)
+        </h4>
+        <img src="https://whizsmart.com/wp-content/uploads/2020/08/Biology.jpg" alt="Immune System" title="Immune System" class="leftPhoto" draggable=false>
+        <h2 style="margin-right:500px">State-of-the-art by Combining Science With Computer.</h2>
+        <h4 style="margin-right:500px;margin-bottom: 200px">
+            The immune system protects your body from outside invaders, including germs such as bacteria,<br> viruses, and fungi, and toxins (chemicals made by microbes). <br>The immune system is made up of different organs, cells,<br> and proteins that work together.<br>Learn without having to facing boring words here!<br>
+        </h4>
+        <img src="https://images.newscientist.com/wp-content/uploads/2019/05/03155847/gettyimages-932737574-2.jpg" alt="Virus" title="Virus" class="rightPhoto" draggable=false>
+        <h2 style="margin-right:500px">Staying Au Courant with this Information.</h2>
+        <h4 style="margin-right:500px;margin-bottom: 200px">
+                        Viruses are an assembly of different types of molecules that consist of genetic material<br> (either a single- or double-stranded DNA or RNA) with a protein coat and sometimes a layer of fat too (an envelope)<br>
 They can assume different shapes and sizes—spacecraft designs, spirals, cylinders and ball shapes.  <br>
-            Bacteria are prokaryotes—the smallest, simplest and most ancient cells, with free-floating genetic material. These microscopic single-celled organisms can be rod, spiral or spherical in shape.
+            Bacteria are prokaryotes—the smallest,<br> simplest and most ancient cells, with free-floating genetic material.<br> These microscopic single-celled organisms can be rod, spiral or spherical in shape.<br>
 
-There are two types of bacteria: Gram-negative and Gram-positive. The key difference is the presence of an extra outer membrane in Gram-negative bacteria. It’s essentially an extra line of defence that makes it harder for antibiotics to penetrate, thus making Gram-negative bacteria more difficult to kill and more prone to developing resistance.<br>
-            With bacteria rapidly developing resistance to antibiotics, it is increasingly important that we know the distinction, because viruses can’t be treated with antibiotics, nor bacteria with antivirals.
-            <br>
-            <br>
-        </div>
+There are two types of bacteria: Gram-negative and Gram-positive.<br> The key difference is the presence of an extra outer membrane in Gram-negative bacteria.<br> It’s essentially an extra line of defence that makes it harder for antibiotics to penetrate,<br> thus making Gram-negative bacteria more difficult to kill and more prone to developing resistance.<br>
+            With bacteria rapidly developing resistance to antibiotics,<br> it is increasingly important that we know the distinction,<br> because viruses can’t be treated with antibiotics, nor bacteria with antivirals.<br>
+        </h4>
+        <img src="https://whizsmart.com/wp-content/uploads/2020/08/Biology.jpg" alt="Immune System" title="Immune System" class="leftPhoto" draggable=false>
+        <h2 style="margin-right:500px">Collaborating with the Club that is Preeminent in this Aspect.</h2>
+        <h4 style="margin-right:500px;padding-bottom: 200px">
+            We Integrated Science Club collaborated with <a href="https://sites.google.com/syss.edu.hk/biology-club" target="_blank" rel="noopener noreferrer">Biology Club</a> to create this fun immune system simulation.<br>
+        </h4>
     </div>
     <script>
         var coll = document.getElementsByClassName("collapsible");
@@ -288,16 +316,12 @@ There are two types of bacteria: Gram-negative and Gram-positive. The key differ
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
     </script>
-    
         
     <!--FOOTER-->
     
     <div style="background-color: white">
         <br><br>
-        <h2 style="color:#0066ff">Hope you enjoyed playing the game!<br><br>
-            <code>Integrated Science Club Social Media:</code><br>
-            <a href="https://sites.google.com/syss.edu.hk/integrated-science-club/home" target="_blank" rel="noopener noreferrer" class="fa fa-google"></a>        
-            <a href="https://www.instagram.com/syss_is_club/" target="_blank" rel="noopener noreferrer" class="fa fa-instagram"></a><br>
+        <h2 style="color:#0066ff">Download the game on Windows or Linux to experience one of the most Unique lesson you have ever been!<br><br>
             <code>Biology Club Social Media:</code><br>
             <a href="https://sites.google.com/syss.edu.hk/biology-club" target="_blank" rel="noopener noreferrer" class="fa fa-google" style="background-color:hotpink"></a>
             <a href="https://www.instagram.com/syss_biology_club/" target="_blank" rel="noopener noreferrer" class="fa fa-instagram"  style="background-color:hotpink"></a><br>
@@ -305,16 +329,17 @@ There are two types of bacteria: Gram-negative and Gram-positive. The key differ
         </h2>
         <br><br>
     </div>
-    <div class="bottomBG" >
-        <br>
-    <h5 style="color:black">
-        <br>
-        Website created by <b>Integrated Science Club committee.</b><br>
-        Should you have any enquiries, feel free to contact any of our committee members, or sending an email to sy10236@syss.edu.hk<br>
-        <code>2022-23 Integrated Science Club</code>
+    <div class="bottomBG" style="border-top:3px solid rebeccapurple;padding:10px;margin-bottom:50px">
+        <h5 style="color:black;">
+            <br>
+            Website and Game created by <b>Integrated Science Club committee.</b><br>
+            Suggestions and support potentially given by <b>Biology Club</b>.<br>
+            Should you have any enquiries, feel free to contact any of our committee members, or sending an email to sy10236@syss.edu.hk<br>
+            <code>2022-23 Integrated Science Club</code>
         </h5>
-        <code><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"/></a><br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</code>
-    <br><br><br><br>
+        <code><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"/></a><br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</code><br>
+        <a href="https://sites.google.com/syss.edu.hk/integrated-science-club/home" target="_blank" rel="noopener noreferrer" class="fa fa-google"></a>        
+        <a href="https://www.instagram.com/syss_is_club/" target="_blank" rel="noopener noreferrer" class="fa fa-instagram"></a><br>
     </div>
     <!--END OF FOOTER-->
     <script src="index.js"></script>
