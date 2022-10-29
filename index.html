@@ -29,6 +29,7 @@
             text-align:center;
             height:100%;
             background-color: lightyellow;
+            overflow-x: hidden;
         }
         ::selection {
             background: lightgreen;
@@ -155,7 +156,7 @@
         }
     </style>
 </head>
-<body onresize="resized()" onscroll="scrollChange()">
+<body onresize="resized()" onscroll="scrollChange()" onload="sendAPI()">
     <!--INIT-->
     <div class="topnav">
         <a href="https://sites.google.com/syss.edu.hk/integrated-science-club/home"><img src="https://i.ibb.co/L6mkY4V/Photo-from-no-reply-1-removebg-preview.png" style="width:40px;height:40px;"/></a>
@@ -195,12 +196,11 @@
         }
         function sendAPI(){
             const Http = new XMLHttpRequest();
-            const url='https://joshuasyss.github.io/is-club-mc.github.io/';
+            const url= 'http://export.arxiv.org/api/query?search_query=all:science&start=0&max_results=10';
             Http.open("GET", url);
             Http.send();
-
             Http.onreadystatechange = (e) => {
-                console.log(Http.responseText)
+                console.log(Http.responseText);
             }
         }
     </script>
@@ -215,7 +215,7 @@
             <img src="https://i.ibb.co/L6mkY4V/Photo-from-no-reply-1-removebg-preview.png" alt="IS Main Website" title="IS Main Website" style="width:300px;height:auto;">
             <br>
             <h2 style="color:black;text-align:left;"><strong><code>Official Website</code></strong></h2><br>
-            <p style="text-align: left;">The official website of Sing Yin Secondary School Integrated Science Club. You can view not only our objectives, and even hands-on experiment dates.</p>
+            <p style="text-align: left;">The official website of Sing Yin Secondary School Integrated Science Club. You can view not only our objectives, and even hands-on's experiment dates.</p>
             <br><br>
             
         </div>
@@ -290,7 +290,6 @@
                 <br><br>
             </div>
         </a>
-        
         <br><br>
         <strong>Useful Links related to Integrated Science</strong>
         <br><br>
